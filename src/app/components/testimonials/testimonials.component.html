@@ -19,10 +19,18 @@
     <h2 class="text-5xl font-display font-bold mb-12 text-left">Témoignages</h2>
 
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
-      <app-testimonial-card 
-        *ngFor="let t of testimonials"
-        [testimonial]="t">
-      </app-testimonial-card>
+      <div *ngFor="let t of testimonials"
+           class="rounded-2xl p-8 h-full flex flex-col justify-between text-white transform transition-transform duration-300 hover:-translate-y-2 relative overflow-hidden bg-gradient-to-br from-pulse-950 via-pulse-900 to-pulse-800 shadow-xl">
+        <div class="relative z-0">
+          <p class="text-xl mb-8 font-playfair font-medium leading-relaxed italic">
+            "{{ t.content }}"
+          </p>
+        </div>
+        <div class="text-right">
+          <h4 class="font-semibold text-pulse-400 text-lg">{{ t.author }}</h4>
+          <p class="text-white/80 text-sm">{{ t.role }}</p>
+        </div>
+      </div>
     </div>
   </div>
 </section>

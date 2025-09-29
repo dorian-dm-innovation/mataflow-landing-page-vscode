@@ -3,7 +3,6 @@ import { HeroComponent } from '../../components/hero/hero.component';
 import { FeaturesComponent } from '../../components/features/features.component';
 import { ExpertCommitteeComponent } from '../../components/expert-committee/expert-committee.component';
 import { TrustDatabaseComponent } from '../../components/trust-database/trust-database.component';
-import { PartnersSectionComponent } from '../../components/partners-section/partners-section.component';
 import { TestimonialsComponent } from '../../components/testimonials/testimonials.component';
 import { DetailsSectionComponent } from '../../components/details-section/details-section.component';
 import { NewsletterComponent } from '../../components/newsletter/newsletter.component';
@@ -18,7 +17,6 @@ import { CommonModule } from '@angular/common';
     FeaturesComponent,
     ExpertCommitteeComponent,
     TrustDatabaseComponent,
-    PartnersSectionComponent,
     TestimonialsComponent,
     DetailsSectionComponent,
     NewsletterComponent

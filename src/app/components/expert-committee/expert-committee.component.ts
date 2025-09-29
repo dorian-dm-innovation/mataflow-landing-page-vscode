@@ -1,15 +1,14 @@
 // expert-committee-section.component.ts
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { ExpertCardComponent } from '../expert-card/expert-card.component';
-import { Expert } from '../../models/expert.model';
+import { Expert, ExpertLevel } from '../../models/expert.model';
 
 
 @Component({
   selector: 'app-expert-committee',
   templateUrl: './expert-committee.component.html',
   standalone: true,
-  imports: [CommonModule, ExpertCardComponent],
+  imports: [CommonModule],
 })
 export class ExpertCommitteeComponent {
   experts: Expert[] = [
@@ -118,4 +117,42 @@ export class ExpertCommitteeComponent {
       initials: "MF"
     }
   ];
+
+  getExpertStyle(level: ExpertLevel) {
+    switch (level) {
+      case 'professor':
+        return {
+          badge: 'bg-amber-500/20 text-amber-300',
+          name: 'text-amber-300',
+          icon: '🎓'
+        };
+      case 'chief':
+        return {
+          badge: 'bg-emerald-500/20 text-emerald-300',
+          name: 'text-emerald-300',
+          icon: '🏥'
+        };
+      case 'expert':
+        return {
+          badge: 'bg-violet-500/20 text-violet-300',
+          name: 'text-violet-300',
+          icon: '🏆'
+        };
+      default:
+        return {
+          badge: 'bg-pulse-500/20 text-pulse-300',
+          name: 'text-pulse-300',
+          icon: '🩺'
+        };
+    }
+  }
 }
+
+  getExpertLevelText(level: ExpertLevel): string {
+    switch (level) {
+      case 'professor': return 'Professeur';
+      case 'chief': return 'Chef de Service';
+      case 'expert': return 'Expert';
+      default: return 'Radiologue';
+    }
+  }

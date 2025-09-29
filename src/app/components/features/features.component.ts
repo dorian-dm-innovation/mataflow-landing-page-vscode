@@ -1,12 +1,11 @@
 import { Component, AfterViewInit, ElementRef, Inject, PLATFORM_ID } from '@angular/core';
 import { CommonModule, isPlatformBrowser } from '@angular/common';
-import { FeatureCardComponent } from '../feature-card/feature-card.component';
 
 @Component({
   selector: 'app-features',
   templateUrl: './features.component.html',
   standalone: true,
-  imports: [CommonModule, FeatureCardComponent]
+  imports: [CommonModule]
 })
 export class FeaturesComponent implements AfterViewInit {
   features = [

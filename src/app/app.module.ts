@@ -18,14 +18,10 @@ import { HeroComponent } from './components/hero/hero.component';
 import { FeaturesComponent } from './components/features/features.component';
 import { ExpertCommitteeComponent } from './components/expert-committee/expert-committee.component';
 import { TrustDatabaseComponent } from './components/trust-database/trust-database.component';
-import { PartnersSectionComponent } from './components/partners-section/partners-section.component';
 import { TestimonialsComponent } from './components/testimonials/testimonials.component';
 import { DetailsSectionComponent } from './components/details-section/details-section.component';
 import { NewsletterComponent } from './components/newsletter/newsletter.component';
 import { FooterComponent } from './components/footer/footer.component';
-import { ErrorBoundaryComponent } from './components/error-boundary/error-boundary.component';
-import { AuroraComponent } from './components/aurora/aurora.component';
-import { LottieAnimationComponent } from './components/lottie-animation/lottie-animation.component';
 
 @NgModule({
   declarations: [
@@ -39,14 +35,10 @@ import { LottieAnimationComponent } from './components/lottie-animation/lottie-a
     FeaturesComponent,
     ExpertCommitteeComponent,
     TrustDatabaseComponent,
-    PartnersSectionComponent,
     TestimonialsComponent,
     DetailsSectionComponent,
     NewsletterComponent,
     FooterComponent,
-    ErrorBoundaryComponent,
-    AuroraComponent,
-    LottieAnimationComponent
   ],
   imports: [
     BrowserModule,

@@ -13,13 +13,32 @@
     </div>
 
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
-      <app-feature-card *ngFor="let f of features; let i = index"
-                        [icon]="f.icon"
-                        [title]="f.title"
-                        [description]="f.description"
-                        [image]="f.image"
-                        [index]="i">
-      </app-feature-card>
+      <div *ngFor="let f of features; let i = index" 
+           class="group relative overflow-hidden rounded-2xl shadow-xl transform-gpu transition-all duration-500 hover:scale-105 hover:shadow-[0_0_30px_rgba(49,185,255,0.4)]"
+           [style.animation-delay]="i * 0.1 + 's'">
+
+        <div class="absolute inset-0 z-0 bg-pulse-950/95"></div>
+        <div class="absolute inset-0 z-[1] bg-gradient-to-t from-pulse-950/90 via-pulse-900/60 to-pulse-950/80 backdrop-blur-sm"></div>
+
+        <div class="relative z-10 p-6 sm:p-8 h-full flex flex-col min-h-[320px]">
+          <div class="rounded-full bg-pulse-500/20 backdrop-blur-sm w-12 h-12 flex items-center justify-center text-pulse-400 mb-6 shadow-[0_0_15px_rgba(49,185,255,0.6)] flex-shrink-0"
+               [innerHTML]="f.icon"></div>
+
+          <div class="mb-4 flex-shrink-0" style="min-height:60px">
+            <h3 class="text-xl sm:text-2xl font-display font-bold text-pulse-300 group-hover:text-pulse-200 transition-all duration-300 leading-tight">
+              {{ f.title }}
+            </h3>
+          </div>
+
+          <div class="flex-grow">
+            <p class="text-gray-200 text-sm sm:text-base leading-relaxed">
+              {{ f.description }}
+            </p>
+          </div>
+        </div>
+
+        <div class="absolute inset-0 z-[2] bg-pulse-400/5 group-hover:opacity-100 transition-opacity duration-300 shadow-[inset_0_0_20px_rgba(49,185,255,0.3)]"></div>
+      </div>
     </div>
 
     <div class="text-center mt-16 ">

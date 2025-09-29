@@ -20,7 +20,34 @@
 
     <!-- Grid -->
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
-      <app-expert-card *ngFor="let expert of experts; let i = index" [expert]="expert" [index]="i"></app-expert-card>
+      <div *ngFor="let expert of experts; let i = index" 
+           class="group relative overflow-hidden rounded-xl backdrop-blur-sm transition-all duration-500 hover:scale-105 p-6 h-full bg-gradient-to-br from-pulse-900/60 to-pulse-800/60"
+           [style.animation-delay]="(0.05 * (i + 1)) + 's'">
+        
+        <div class="absolute inset-0 opacity-5 bg-cover bg-center" style="background-image: url('/assets/network-icon-3.jpg')"></div>
+
+        <div class="relative z-10 h-full flex flex-col">
+          <div class="flex items-start gap-4 mb-4">
+            <div class="w-14 h-14 rounded-full bg-white/10 flex items-center justify-center font-bold text-white shadow-lg text-sm">
+              {{ expert.initials }}
+            </div>
+            <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full backdrop-blur-sm text-xs font-medium"
+                 [ngClass]="getExpertStyle(expert.level).badge">
+              <span>{{ getExpertStyle(expert.level).icon }}</span>
+              <span>{{ getExpertLevelText(expert.level) }}</span>
+            </div>
+          </div>
+
+          <div class="flex-grow">
+            <h4 [ngClass]="getExpertStyle(expert.level).name" class="text-lg font-bold mb-2">{{ expert.name }}</h4>
+            <p class="text-white/80 font-medium mb-2 text-sm">{{ expert.role }}</p>
+            <p class="text-white/60 text-sm mb-3">{{ expert.institution }}</p>
+            <p class="text-white/50 text-xs italic">Spécialité : {{ expert.speciality }}</p>
+          </div>
+        </div>
+
+        <div class="absolute inset-0 bg-white/5 transition-opacity duration-300"></div>
+      </div>
     </div>
 
     <!-- CTA -->

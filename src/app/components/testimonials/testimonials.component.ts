@@ -1,12 +1,11 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { TestimonialCardComponent } from '../testimonial-card/testimonial-card.component';
 import { Testimonial } from '../../models/testimonial.model';
 
 @Component({
   selector: 'app-testimonials',
   standalone: true,
-  imports: [CommonModule, TestimonialCardComponent],
+  imports: [CommonModule],
   templateUrl: './testimonials.component.html',
 })
 export class TestimonialsComponent {
