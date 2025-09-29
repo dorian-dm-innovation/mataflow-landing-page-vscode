@@ -18,11 +18,11 @@ export class TrustDatabaseComponent {
   ];
 
   trustFeatures: TrustFeature[] = [
-    { icon: "🔒", title: "Sécurité & Confidentialité maximales", description: "Hébergement HDS certifié, chiffrement bout-en-bout, conformité RGPD stricte et audit de sécurité continu" },
-    { icon: "🛡️", title: "Label \"Garantie Humaine\"", description: "Contrôle humain systématique, transparence des algorithmes et validation médicale de chaque suggestion" },
-    { icon: "🎯", title: "Précision clinique validée", description: "95% de précision sur cohortes multi-centriques, algorithmes entraînés sur données françaises exclusivement" },
-    { icon: "👥", title: "Développement collaboratif", description: "Co-créé avec 500 radiologues utilisateurs, retours d'expérience intégrés quotidiennement" },
-    { icon: "📚", title: "Mise à jour & Veille continue", description: "Base enrichie quotidiennement, veille bibliographique automatisée et intégration des dernières recommandations" },
-    { icon: "🏛️", title: "Conformité réglementaire", description: "Conformité dispositif médical et respect des standards internationaux" },
+    { title: "Sécurité & Confidentialité maximales", description: "Hébergement HDS certifié, chiffrement bout-en-bout, conformité RGPD stricte et audit de sécurité continu" },
+    { title: "Label \"Garantie Humaine\"", description: "Contrôle humain systématique, transparence des algorithmes et validation médicale de chaque suggestion" },
+    { title: "Précision clinique validée", description: "95% de précision sur cohortes multi-centriques, algorithmes entraînés sur données françaises exclusivement" },
+    { title: "Développement collaboratif", description: "Co-créé avec 500 radiologues utilisateurs, retours d'expérience intégrés quotidiennement" },
+    { title: "Mise à jour & Veille continue", description: "Base enrichie quotidiennement, veille bibliographique automatisée et intégration des dernières recommandations" },
+    {title: "Conformité réglementaire", description: "Conformité dispositif médical et respect des standards internationaux" },
   ];
 }
