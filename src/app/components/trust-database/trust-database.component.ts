@@ -9,6 +9,12 @@ import { DataStat, TrustFeature } from '../../models/trust-database.model';
   imports: [CommonModule],
 })
 export class TrustDatabaseComponent {
+  openDemoModal(): void {
+    // Émettre un événement pour ouvrir la modale de démonstration
+    const event = new CustomEvent('openDemoModal');
+    window.dispatchEvent(event);
+  }
+
   dataStats: DataStat[] = [
     { number: "6 500 000", label: "Images radiologiques annotées", description: "Base d'apprentissage validée par experts", delay: "0.1s" },
     { number: "66 000", label: "Cas cliniques documentés", description: "Validés par des experts en radiologie", delay: "0.2s" },

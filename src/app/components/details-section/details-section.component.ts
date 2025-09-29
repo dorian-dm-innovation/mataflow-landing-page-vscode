@@ -24,6 +24,11 @@ export class DetailsSectionComponent {
       company: [''],
       message: ['']
     });
+
+    // Écouter l'événement d'ouverture de modale depuis d'autres composants
+    window.addEventListener('openDemoModal', () => {
+      this.openModal();
+    });
   }
 
   openModal(): void {
