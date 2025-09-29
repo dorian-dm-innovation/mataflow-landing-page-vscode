@@ -43,8 +43,55 @@
       <nav aria-label="Société" class="grid gap-3">
         <h3 class="text-sm uppercase tracking-wider text-gray-300 font-semibold">Société</h3>
         <a href="/about" class="text-gray-200 hover:text-white transition-colors hover:underline">À propos</a>
-        <a href="/demo" class="text-gray-200 hover:text-white transition-colors hover:underline">Démo interactive</a>
-        <a href="#newsletter" class="text-gray-200 hover:text-white transition-colors hover:underline">Newsletter</a>
+
+        <div *ngIf="isModalOpen" class="modal">
+          <div class="modal-content">
+            <span class="close" (click)="closeModal()">&times;</span>        
+            <div *ngIf="modalContent === 'conditionsUtilisation'">
+              <h1>{{ "cgu.title" | translate }}</h1>
+              <h2>{{ "cgu.sections.title1" | translate }}</h2>
+              <p>
+                {{ "cgu.sections.content1" | translate }}
+              </p>
+        
+              <h2>{{ "cgu.sections.title2" | translate }}</h2>
+              <p>
+                {{ "cgu.sections.content2" | translate }}
+              </p>
+        
+              <h2>{{ "cgu.sections.title3" | translate }}</h2>
+              
+              <p>
+                {{ "cgu.sections.content3" | translate }}
+              </p>
+        
+              <h2>{{ "cgu.sections.title4" | translate }}</h2>
+              <p>
+                {{ "cgu.sections.content4" | translate }}
+              </p>
+        
+              <h2>{{ "cgu.sections.title5" | translate }}</h2>
+              <p>
+                {{ "cgu.sections.content5" | translate }}
+              </p>
+        
+              <h2>{{ "cgu.sections.title6" | translate }}</h2>
+              <p>
+                {{ "cgu.sections.content6" | translate }}
+              </p>
+        
+              <h2>{{ "cgu.sections.title7" | translate }}</h2>
+              <p>
+                {{ "cgu.sections.content7" | translate }}
+              </p>
+        
+              <h2>{{ "cgu.sections.title8" | translate }}</h2>
+              <p>
+                {{ "cgu.sections.content8" | translate }}
+              </p>
+            </div>
+          </div>
+        </div>
       </nav>
 
       <!-- Resources -->
