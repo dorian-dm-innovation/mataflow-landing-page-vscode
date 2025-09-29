@@ -26,6 +26,15 @@ export class FooterComponent {
     });
   }
 
+  openModal(content: string): void {
+    this.modalContent = content;
+    this.isModalOpen = true;
+  }
+
+  closeModal(): void {
+    this.isModalOpen = false;
+  }
+
   handleSubscribe(): void {
     if (this.subscribeForm.valid) {
       const email = this.subscribeForm.get('email')?.value.trim();
@@ -36,11 +45,4 @@ export class FooterComponent {
 
   linkClass = "text-gray-200 hover:text-white transition-colors hover:underline";
 }
-openModal(content: string): void {
-    this.modalContent = content;
-    this.isModalOpen = true;
-  }
 
-  closeModal(): void {
-    this.isModalOpen = false;
-  }
