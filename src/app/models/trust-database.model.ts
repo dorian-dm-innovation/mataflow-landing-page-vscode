@@ -6,7 +6,6 @@ export interface DataStat {
 }
 
 export interface TrustFeature {
-  icon: string;
   title: string;
   description: string;
 }
