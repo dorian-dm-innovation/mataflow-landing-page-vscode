@@ -11,6 +11,8 @@ import { CommonModule } from '@angular/common';
 })
 export class DetailsSectionComponent {
   form: FormGroup;
+  isModalOpen = false;
+  isSubmitting = false;
 
   // Chemin relatif vers l'image dans assets
   networkBanner2 = 'assets/network-banner-2.jpg';
@@ -19,8 +21,19 @@ export class DetailsSectionComponent {
     this.form = this.fb.group({
       fullName: ['', Validators.required],
       email: ['', [Validators.required, Validators.email]],
-      company: ['']
+      company: [''],
+      message: ['']
     });
+  }
+
+  openModal(): void {
+    this.isModalOpen = true;
+    document.body.style.overflow = 'hidden';
+  }
+
+  closeModal(): void {
+    this.isModalOpen = false;
+    document.body.style.overflow = '';
   }
 
   onSubmit(): void {
@@ -29,7 +42,14 @@ export class DetailsSectionComponent {
       return;
     }
 
-    alert('Demande envoyée avec succès ! Nous vous contactons sous 24h.');
-    this.form.reset();
+    this.isSubmitting = true;
+
+    // Simulate API call
+    setTimeout(() => {
+      alert('Demande envoyée avec succès ! Nous vous contactons sous 24h.');
+      this.form.reset();
+      this.isSubmitting = false;
+      this.closeModal();
+    }, 2000);
   }
 }
