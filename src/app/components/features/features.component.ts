@@ -50,7 +50,7 @@ export class FeaturesComponent implements AfterViewInit {
   constructor(private el: ElementRef, @Inject(PLATFORM_ID) private platformId: Object) {}
 
   ngAfterViewInit(): void {
-    if (!isPlatformBrowser(this.platformId)) return; // ✅ Ne s'exécute que côté navigateur
+    if (!isPlatformBrowser(this.platformId)) return;
 
     if ('IntersectionObserver' in window) {
       const observer = new IntersectionObserver(
