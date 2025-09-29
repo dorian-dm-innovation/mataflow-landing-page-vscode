@@ -16,6 +16,8 @@ import { MatIconModule } from '@angular/material/icon'; // <-- Important !
 })
 export class FooterComponent {
   subscribeForm: FormGroup;
+  modalContent: string = '';
+
   currentYear: number = new Date().getFullYear();
 
   constructor(private fb: FormBuilder) {
