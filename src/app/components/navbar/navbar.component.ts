@@ -12,6 +12,7 @@ import { CommonModule } from '@angular/common';
 export class NavbarComponent {
   isScrolled = false;
   isMenuOpen = false;
+  showScrollToTop = false;
   lang = 'fr'; // Langue par défaut
 
   constructor(private router: Router) {}
@@ -19,6 +20,8 @@ export class NavbarComponent {
   @HostListener('window:scroll', [])
   onWindowScroll() {
     this.isScrolled = window.scrollY > 10;
+    // Afficher le bouton après avoir dépassé la section hero (environ 800px)
+    this.showScrollToTop = window.scrollY > 800;
   }
 
   toggleMenu(): void {

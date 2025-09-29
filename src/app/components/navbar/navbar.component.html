@@ -100,3 +100,22 @@
 
 
 </header>
+
+<!-- Scroll to Top Button -->
+<button 
+  *ngIf="showScrollToTop"
+  (click)="scrollToTop()"
+  class="fixed bottom-8 right-8 z-50 w-12 h-12 bg-gradient-to-r from-cyan-400 to-blue-500 hover:from-cyan-300 hover:to-blue-400 text-white rounded-full shadow-[0_0_20px_rgba(6,182,212,0.4)] hover:shadow-[0_0_30px_rgba(6,182,212,0.6)] transition-all duration-300 transform hover:scale-110 active:scale-95 backdrop-blur-sm border border-cyan-300/30 group"
+  aria-label="Remonter en haut de la page"
+>
+  <svg 
+    xmlns="http://www.w3.org/2000/svg" 
+    class="w-6 h-6 mx-auto transition-transform duration-300 group-hover:-translate-y-1" 
+    fill="none" 
+    viewBox="0 0 24 24" 
+    stroke="currentColor" 
+    stroke-width="2"
+  >
+    <path stroke-linecap="round" stroke-linejoin="round" d="M5 10l7-7m0 0l7 7m-7-7v18" />
+  </svg>
+</button>

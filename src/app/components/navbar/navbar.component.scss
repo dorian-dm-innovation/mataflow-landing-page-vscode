@@ -80,3 +80,33 @@ select {
   background-color: #333; /* Fond pour les options */
   color: #fff; /* Couleur du texte des options */
 }
+/* Scroll to Top Button Animations */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.scroll-to-top-enter {
+  animation: fadeInUp 0.3s ease-out;
+}
+
+/* Responsive adjustments for scroll button */
+@media (max-width: 640px) {
+  .scroll-to-top-button {
+    bottom: 1rem;
+    right: 1rem;
+    width: 3rem;
+    height: 3rem;
+  }
+  
+  .scroll-to-top-button svg {
+    width: 1.25rem;
+    height: 1.25rem;
+  }
+}
