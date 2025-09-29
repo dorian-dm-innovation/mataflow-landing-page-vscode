@@ -3,42 +3,144 @@
   justify-content: center;
   align-items: center;
   position: fixed;
-  z-index: 1;
+  z-index: 1000;
   left: 0;
   top: 0;
   width: 100%;
   height: 100%;
   overflow: auto;
-  background-color: rgba(0, 0, 0, 0.4);
+  background-color: rgba(0, 0, 0, 0.7);
+  backdrop-filter: blur(5px);
 }
 
 .modal-content {
-  background-color: #010e1d;  // Utiliser la couleur de fond bleu sombre du background général de la page
-  color: white;  // Texte blanc
+  background-color: #010e1d;
+  color: white;
   margin: auto;
   padding: 20px;
-  border: 2px solid #001ecb;  // Bordure bleu électrique sombre néon
-  border-radius: 15px;  // Bordures arrondies
-  width: 66.67%;  // 2/3 de la page
+  border: 2px solid #001ecb;
+  border-radius: 15px;
+  width: 90%;
   max-width: 800px;
-  max-height: 80%;  // Limite la hauteur pour permettre le défilement
-  overflow-y: auto;  // Permet le défilement vertical
-  text-align: center;  // Centrer le texte
-  font-family: 'Roboto', sans-serif;  // Utiliser la police Roboto
-  font-size: 14px;  // Réduire la taille du texte
-  box-shadow: 0 0 10px #001ecb;  // Effet de lumière sur les bordures
+  max-height: 90vh;
+  overflow-y: auto;
+  text-align: center;
+  font-family: 'Inter', sans-serif;
+  font-size: 14px;
+  box-shadow: 0 0 30px rgba(0, 30, 203, 0.5);
+  position: relative;
 }
 
 .close {
-  color: #ffffff;  // Blanc pétant pour le bouton de fermeture
-  float: right;
-  font-size: 24px;  // Taille du texte réduite
+  position: absolute;
+  top: 15px;
+  right: 20px;
+  color: #ffffff;
+  font-size: 28px;
   font-weight: bold;
+  cursor: pointer;
+  z-index: 1001;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  transition: all 0.3s ease;
 }
 
 .close:hover,
 .close:focus {
-  color: #ff0000;  // Rouge pour le survol et le focus
+  color: #ff0000;
+  background-color: rgba(255, 255, 255, 0.1);
   text-decoration: none;
-  cursor: pointer;
+  transform: scale(1.1);
+}
+
+.modal-content h2 {
+  color: #31b9ff;
+  font-size: 24px;
+  margin: 30px 0 10px 0;
+  font-weight: bold;
+}
+
+.modal-content p {
+  color: #cccccc;
+  margin-bottom: 25px;
+  font-size: 14px;
+}
+
+.modal-content form {
+  text-align: left;
+}
+
+.modal-content label {
+  display: block;
+  color: #ffffff;
+  font-weight: 500;
+  margin-bottom: 8px;
+  margin-top: 15px;
+  font-size: 13px;
+}
+
+.modal-content input,
+.modal-content textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #001ecb;
+  border-radius: 8px;
+  background-color: rgba(0, 30, 203, 0.1);
+  color: #ffffff;
+  font-size: 14px;
+  transition: all 0.3s ease;
+  box-sizing: border-box;
+}
+
+.modal-content input:focus,
+.modal-content textarea:focus {
+  outline: none;
+  border-color: #31b9ff;
+  box-shadow: 0 0 10px rgba(49, 185, 255, 0.3);
+  background-color: rgba(49, 185, 255, 0.05);
+}
+
+.modal-content input::placeholder,
+.modal-content textarea::placeholder {
+  color: #888888;
+}
+
+.modal-content textarea {
+  resize: vertical;
+  min-height: 80px;
+}
+
+.modal-content button:hover {
+  background: linear-gradient(90deg, #31b9ff, #001ecb) !important;
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(49, 185, 255, 0.4);
+}
+
+.modal-content button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  transform: none;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .modal-content {
+    width: 95%;
+    padding: 15px;
+    margin: 10px;
+  }
+  
+  .modal-content h2 {
+    font-size: 20px;
+  }
+  
+  .close {
+    top: 10px;
+    right: 15px;
+    font-size: 24px;
+  }
 }
