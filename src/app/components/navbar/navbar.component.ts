@@ -12,6 +12,7 @@ import { CommonModule } from '@angular/common';
 export class NavbarComponent {
   isScrolled = false;
   isMenuOpen = false;
+  lang = 'fr'; // Langue par défaut
 
   constructor(private router: Router) {}
 
@@ -41,5 +42,13 @@ export class NavbarComponent {
   closeMobileMenu(): void {
     this.isMenuOpen = false;
     document.body.style.overflow = '';
+  }
+
+  ChangeLang(event: any): void {
+    const selectedLang = event.target.value;
+    this.lang = selectedLang;
+    // Ici vous pouvez ajouter la logique pour changer la langue
+    // Par exemple avec ngx-translate ou votre service de traduction
+    console.log('Langue sélectionnée:', selectedLang);
   }
 }
