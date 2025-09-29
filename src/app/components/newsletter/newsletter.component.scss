@@ -1,0 +1,15 @@
+.button-primary {
+  background-color: #f97316; /* bg-orange-500 */
+  color: #fff; /* text-white */
+  font-weight: 600; /* font-semibold */
+  padding-top: 0.75rem; /* py-3 */
+  padding-bottom: 0.75rem;
+  padding-left: 1.5rem; /* px-6 */
+  padding-right: 1.5rem;
+  border-radius: 9999px; /* rounded-full */
+  transition: all 0.2s; /* transition-all */
+}
+.button-primary:hover {
+  background-color: #ea580c; /* hover:bg-orange-600 */
+  transform: scale(1.05); /* hover:scale-105 */
+}

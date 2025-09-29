@@ -1,0 +1,28 @@
+<section
+  class="py-12 bg-gradient-to-b from-pulse-950 to-pulse-900 text-white relative"
+  id="testimonials"
+  [ngStyle]="{
+    'background-image': 'linear-gradient(rgba(12,65,139,0.95), rgba(0,25,61,0.95)), url(/assets/background-section3.png)',
+    'background-size': 'cover',
+    'background-position': 'center',
+    'background-attachment': 'fixed'
+  }"
+>
+  <div class="section-container">
+    <div class="flex items-center gap-4 mb-6">
+      <div class="pulse-chip">
+        <span class="inline-flex items-center justify-center w-5 h-5 rounded-full bg-pulse-500 text-white mr-2">06</span>
+        <span>Témoignages</span>
+      </div>
+    </div>
+
+    <h2 class="text-5xl font-display font-bold mb-12 text-left">Témoignages</h2>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
+      <app-testimonial-card 
+        *ngFor="let t of testimonials"
+        [testimonial]="t">
+      </app-testimonial-card>
+    </div>
+  </div>
+</section>

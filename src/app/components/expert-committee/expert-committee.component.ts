@@ -1,0 +1,121 @@
+// expert-committee-section.component.ts
+import { Component } from '@angular/core';
+import { CommonModule } from '@angular/common';
+import { ExpertCardComponent } from '../expert-card/expert-card.component';
+import { Expert } from '../../models/expert.model';
+
+
+@Component({
+  selector: 'app-expert-committee',
+  templateUrl: './expert-committee.component.html',
+  standalone: true,
+  imports: [CommonModule, ExpertCardComponent],
+})
+export class ExpertCommitteeComponent {
+  experts: Expert[] = [
+    {
+      name: "Pr. Nicolas Sans",
+      role: "PU-PH de Radiologie Expert",
+      institution: "CHU de Toulouse",
+      speciality: "Imagerie musculo-squelettique",
+      level: "professor",
+      initials: "NS"
+    },
+    {
+      name: "Pr. Sébastien Aubry",
+      role: "Professeur de Radiologie Expert",
+      institution: "Université de Franche-Comté",
+      speciality: "Imagerie musculo-squelettique",
+      level: "professor",
+      initials: "SA"
+    },
+    {
+      name: "Pr. Ingrid Millet",
+      role: "PU-PH de Radiologie Expert",
+      institution: "Hôpital Lapeyronie, Montpellier",
+      speciality: "Imagerie des urgences",
+      level: "professor",
+      initials: "IM"
+    },
+    {
+      name: "Pr. Catherine Cytheval",
+      role: "Professeur de Radiologie Expert",
+      institution: "CHU de Montpellier",
+      speciality: "Imagerie musculo-squelettique",
+      level: "professor",
+      initials: "CC"
+    },
+    {
+      name: "Pr. Gilbert Ferretti",
+      role: "Professeur de Radiologie Expert",
+      institution: "CHU de Grenoble",
+      speciality: "Imagerie thoracique",
+      level: "professor",
+      initials: "GF"
+    },
+    {
+      name: "Pr. Julien Frandon",
+      role: "Professeur de Radiologie Expert",
+      institution: "Université de Nîmes",
+      speciality: "Radiologie interventionnelle",
+      level: "professor",
+      initials: "JF"
+    },
+    {
+      name: "Pr. Philippe Douek",
+      role: "Professeur de Radiologie Expert",
+      institution: "CHU de Lyon",
+      speciality: "Imagerie cardiaque et vasculaire",
+      level: "professor",
+      initials: "PD"
+    },
+    {
+      name: "Dr. Marc Zins",
+      role: "Chef de Service de Radiologie Expert",
+      institution: "Hôpital Saint-Joseph de Paris",
+      speciality: "Radiologie abdominale",
+      level: "chief",
+      initials: "MZ"
+    },
+    {
+      name: "Dr. Julien Savatovsky",
+      role: "Chef de Service Expert",
+      institution: "Hôpital Fondation Rothschild",
+      speciality: "Neuroradiologie",
+      level: "chief",
+      initials: "JS"
+    },
+    {
+      name: "Dr. Franck Lapegue",
+      role: "Radiologue Expert",
+      institution: "Expert en imagerie musculo-squelettique",
+      speciality: "Imagerie MSK avancée",
+      level: "expert",
+      initials: "FL"
+    },
+    {
+      name: "Dr. Vincent Brun",
+      role: "Radiologue Expert",
+      institution: "Praticien hospitalier",
+      speciality: "Radiologie générale",
+      level: "expert",
+      initials: "VB"
+    },
+    {
+      name: "Dr. Madeleine Cavet",
+      role: "Radiologue Expert",
+      institution: "Praticien hospitalier",
+      speciality: "Radiologie générale",
+      level: "expert",
+      initials: "MC"
+    },
+    {
+      name: "Dr. Maud Fournol",
+      role: "Radiologue Expert",
+      institution: "Praticien hospitalier",
+      speciality: "Radiologie générale",
+      level: "expert",
+      initials: "MF"
+    }
+  ];
+}

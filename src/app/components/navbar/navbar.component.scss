@@ -1,0 +1,28 @@
+.nav-link-header {
+  position: relative;
+  color: #e5e7eb; /* gris clair */
+  transition: color 0.3s;
+  cursor: pointer;
+}
+
+.nav-link-header::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -2px;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(90deg, #f97316, #facc15); /* orange -> jaune */
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform 0.3s ease;
+}
+
+.nav-link-header:hover {
+  color: #fff;
+}
+
+.nav-link-header:hover::after {
+  transform: scaleX(1);
+  transform-origin: left;
+}

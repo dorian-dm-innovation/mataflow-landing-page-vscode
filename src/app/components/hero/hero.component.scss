@@ -1,0 +1,15 @@
+.bg-gradient-to-b {
+  background: linear-gradient(to bottom, #001528, #0a3570);
+}
+.text-transparent {
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+}
+.animate-pulse {
+  animation: pulse 2s infinite;
+}
+@keyframes pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.8; }
+}

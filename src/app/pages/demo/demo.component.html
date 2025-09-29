@@ -1,0 +1,26 @@
+<main class="min-h-screen bg-gradient-to-b from-pulse-950 to-pulse-900 text-white p-8 pt-20">
+  <section class="section-container">
+    <header class="mb-10">
+      <h1 class="text-4xl md:text-5xl font-display font-bold">Demander une démo</h1>
+      <p class="mt-4 text-white/70 max-w-2xl">
+        Découvrez Atlas en action et voyez comment il peut s'intégrer à vos processus avec élégance et efficacité.
+      </p>
+    </header>
+
+    <article class="bg-gradient-to-br from-pulse-950 via-pulse-900 to-pulse-800 rounded-xl p-8 ring-1 ring-white/10 shadow-xl max-w-2xl">
+      <p class="text-white/80 mb-6">
+        Partagez vos besoins et contraintes ; notre équipe préparera une démonstration adaptée à votre contexte.
+      </p>
+
+      <div class="flex flex-col sm:flex-row items-start sm:items-center gap-4">
+        <button (click)="handleDemo()" class="button-primary w-full sm:w-auto">
+          Planifier ma démo
+        </button>
+
+        <a routerLink="/" class="text-pulse-500 hover:text-pulse-700 underline">
+          Retour à l'accueil
+        </a>
+      </div>
+    </article>
+  </section>
+</main>
