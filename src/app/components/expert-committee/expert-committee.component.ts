@@ -124,25 +124,21 @@ export class ExpertCommitteeComponent {
         return {
           badge: 'bg-amber-500/20 text-amber-300',
           name: 'text-amber-300',
-          icon: '🎓'
         };
       case 'chief':
         return {
           badge: 'bg-emerald-500/20 text-emerald-300',
           name: 'text-emerald-300',
-          icon: '🏥'
         };
       case 'expert':
         return {
           badge: 'bg-violet-500/20 text-violet-300',
           name: 'text-violet-300',
-          icon: '🏆'
         };
       default:
         return {
           badge: 'bg-pulse-500/20 text-pulse-300',
           name: 'text-pulse-300',
-          icon: '🩺'
         };
     }
   }
