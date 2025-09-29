@@ -9,3 +9,48 @@
   white-space: nowrap;
   border-width: 0;
 }
+
+.modal {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.modal-content {
+  background-color: #010e1d;  // Utiliser la couleur de fond bleu sombre du background général de la page
+  color: white;  // Texte blanc
+  margin: auto;
+  padding: 20px;
+  border: 2px solid #001ecb;  // Bordure bleu électrique sombre néon
+  border-radius: 15px;  // Bordures arrondies
+  width: 66.67%;  // 2/3 de la page
+  max-width: 800px;
+  max-height: 80%;  // Limite la hauteur pour permettre le défilement
+  overflow-y: auto;  // Permet le défilement vertical
+  text-align: center;  // Centrer le texte
+  font-family: 'Roboto', sans-serif;  // Utiliser la police Roboto
+  font-size: 14px;  // Réduire la taille du texte
+  box-shadow: 0 0 10px #001ecb;  // Effet de lumière sur les bordures
+}
+
+.close {
+  color: #ffffff;  // Blanc pétant pour le bouton de fermeture
+  float: right;
+  font-size: 24px;  // Taille du texte réduite
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: #ff0000;  // Rouge pour le survol et le focus
+  text-decoration: none;
+  cursor: pointer;
+}
