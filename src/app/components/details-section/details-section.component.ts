@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, OnInit, Inject, PLATFORM_ID } from '@angular/core';
+import { isPlatformBrowser } from '@angular/common';
 import { FormBuilder, FormGroup, Validators, ReactiveFormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
 
@@ -9,22 +10,29 @@ import { CommonModule } from '@angular/common';
   templateUrl: './details-section.component.html',
   styleUrls: ['./details-section.component.scss']
 })
-export class DetailsSectionComponent {
+export class DetailsSectionComponent implements OnInit {
   form: FormGroup;
   isModalOpen = false;
   isSubmitting = false;
+  isBrowser = false;
 
   // Chemin relatif vers l'image dans assets
   networkBanner2 = 'assets/network-banner-2.jpg';
 
-  constructor(private fb: FormBuilder) {
+  constructor(
+    private fb: FormBuilder,
+    @Inject(PLATFORM_ID) private platformId: Object
+  ) {
     this.form = this.fb.group({
       fullName: ['', Validators.required],
       email: ['', [Validators.required, Validators.email]],
       company: [''],
       message: ['']
     });
+  }
 
+  ngOnInit(): void {
+    this.isBrowser = isPlatformBrowser(this.platformId);
   }
 
   openModal(): void {
