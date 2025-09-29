@@ -146,7 +146,7 @@ export class ExpertCommitteeComponent {
         };
     }
   }
-}
+
 
   getExpertLevelText(level: ExpertLevel): string {
     switch (level) {
@@ -156,3 +156,4 @@ export class ExpertCommitteeComponent {
       default: return 'Radiologue';
     }
   }
+}
