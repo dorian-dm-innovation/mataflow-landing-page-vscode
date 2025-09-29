@@ -42,6 +42,10 @@
   scrollbar-with:none;
 }
 
+.modal-content::-webkit-scrollbar {
+  display: none; /* pour Chrome, Safari et Opera */
+}
+
 .close {
   color: #ffffff;  // Blanc pétant pour le bouton de fermeture
   float: right;
