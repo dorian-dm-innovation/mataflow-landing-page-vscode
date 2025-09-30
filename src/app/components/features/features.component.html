@@ -1,3 +1,4 @@
+Qu'est-ce qui ne va pas dans ce code ?
 <section
   class="py-16 sm:py-24 relative bg-gradient-to-b from-pulse-950 to-pulse-900 text-white"
   id="features"
@@ -42,7 +43,6 @@
             </p>
           </div>
         </div>
-      </div>
         <div class="absolute inset-0 z-[2] bg-pulse-400/5 group-hover:opacity-100 transition-opacity duration-300 shadow-[inset_0_0_20px_rgba(49,185,255,0.3)]"></div>
       </div>
     </div>
@@ -69,16 +69,9 @@
             Présentation vidéo
           </a>
         </div>
-          <!-- Modale "Nous contacter" -->
-<div *ngIf="isVideoModalOpen" class="modal">
-  <div class="modal-content" (click)="$event.stopPropagation()">
-    <span class="close absolute top-4 right-4 text-white text-2xl cursor-pointer" (click)="closeVideoModal()">&times;</span>
-
-    <h2 class="text-2xl font-bold mb-4">Nous contacter</h2>
-
-  </div>
-</div>
-        </div>
+      </div>
     </div>
-</section>
+  </div>
 
+
+</section>
