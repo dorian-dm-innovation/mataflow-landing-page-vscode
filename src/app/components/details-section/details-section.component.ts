@@ -11,7 +11,7 @@ import { CommonModule } from '@angular/common';
   styleUrls: ['./details-section.component.scss']
 })
 export class DetailsSectionComponent implements OnInit {
-  form: FormGroup;
+  contactForm: FormGroup;
   isModalOpen = false;
   isSubmitting = false;
   isBrowser = false;
@@ -23,7 +23,7 @@ export class DetailsSectionComponent implements OnInit {
     private fb: FormBuilder,
     @Inject(PLATFORM_ID) private platformId: Object
   ) {
-    this.form = this.fb.group({
+    this.contactForm = this.fb.group({
       fullName: ['', Validators.required],
       email: ['', [Validators.required, Validators.email]],
       company: [''],
@@ -45,8 +45,8 @@ export class DetailsSectionComponent implements OnInit {
     document.body.style.overflow = '';
   }
 
-  onSubmit(): void {
-    if (this.form.invalid) {
+  onContactSubmit(): void {
+    if (this.contactForm.invalid) {
       alert('Veuillez remplir tous les champs obligatoires');
       return;
     }
@@ -56,7 +56,7 @@ export class DetailsSectionComponent implements OnInit {
     // Simulate API call
     setTimeout(() => {
       alert('Demande envoyée avec succès ! Nous vous contactons sous 24h.');
-      this.form.reset();
+      this.contactForm.reset();
       this.isSubmitting = false;
       this.closeModal();
     }, 2000);
