@@ -52,36 +52,28 @@
   </div>
 </footer>
 
-<!-- Modal Overlay -->
-<div *ngIf="isModalOpen" class="fixed inset-0 z-50 flex items-center justify-center bg-black/50 p-4">
-  <!-- Modal content -->
-  <div class="bg-gray-800 text-white max-w-3xl w-full max-h-[90vh] overflow-y-auto rounded-xl shadow-xl p-6 relative">
-    <button (click)="closeModal()" class="absolute top-4 right-4 text-gray-200 hover:text-white text-2xl font-bold">&times;</button>
+<!-- Modales -->
+<div *ngIf="isModalOpen" class="modal">
+  <div class="modal-content">
+    <span class="close" (click)="closeModal()">&times;</span>
 
     <!-- Conditions d'utilisation -->
     <div *ngIf="modalContent === 'conditionsUtilisation'">
       <h1 class="text-2xl font-bold mb-4">Conditions générales d'utilisation</h1>
       <h2 class="text-xl font-semibold mt-4 mb-2">1. Acceptation des conditions</h2>
       <p>En utilisant le chatbot radiologique, vous acceptez pleinement et sans réserve les présentes conditions générales d'utilisation. Si vous n'acceptez pas ces conditions, veuillez ne pas utiliser le chatbot.</p>
-
       <h2 class="text-xl font-semibold mt-4 mb-2">2. Objectif du chatbot</h2>
       <p>Le chatbot radiologique est spécifiquement conçu pour assister les radiologues en fournissant des informations pertinentes à leur domaine d'expertise. Il est important de souligner que le chatbot ne doit pas être considéré comme une aide au diagnostic ou un conseil médical. Les utilisateurs doivent toujours consulter un professionnel de santé qualifié pour des avis médicaux personnalisés. Les décisions doivent être prises par les professionnels de santé en s'appuyant sur leur propre expertise et non uniquement sur les informations fournies par le chatbot.</p>
-
       <h2 class="text-xl font-semibold mt-4 mb-2">3. Utilisation responsable</h2>
       <p>Vous vous engagez à utiliser le chatbot radiologique de manière responsable, éthique et conforme à toutes les lois et réglementations en vigueur. Vous ne devez pas utiliser le chatbot à des fins illégales, diffamatoires, offensantes, ou pour tout autre usage non autorisé. Certaines ressources documentaires de MATA sont en cours de traduction. Par conséquent, MATA ne peut garantir un service aussi exhaustif dans les autres langues que le français à ce jour.</p>
-
       <h2 class="text-xl font-semibold mt-4 mb-2">4. Confidentialité des données</h2>
       <p>Le chatbot n'a pas vocation à traiter des données personnelles de patients. Il est impératif de ne pas intégrer de données personnelles susceptibles d'identifier par quelque moyen que ce soit un individu. Nous nous engageons à maintenir la confidentialité des informations que vous fournissez au chatbot. Les données seront traitées conformément à notre politique de confidentialité, disponible pour consultation. Des mesures de sécurité appropriées seront mises en place pour protéger vos données contre tout accès non autorisé ou toute divulgation.</p>
-
       <h2 class="text-xl font-semibold mt-4 mb-2">5. Responsabilité</h2>
       <p>L'utilisateur reconnaît et accepte que l'utilisation du chatbot est à ses propres risques. Le chatbot ne fournit qu'une assistance générale et ne peut pas remplacer une évaluation médicale approfondie. En conséquence, l'utilisateur est seul responsable des décisions qu'il prend en se basant sur les informations fournies par le chatbot. Aucune garantie n'est donnée quant à l'exactitude, la fiabilité ou la pertinence des informations fournies.</p>
-
       <h2 class="text-xl font-semibold mt-4 mb-2">6. Mises à jour et modifications</h2>
       <p>Nous nous réservons le droit de mettre à jour, modifier ou interrompre le chatbot radiologique à tout moment. Les utilisateurs seront informés de tout changement significatif via des notifications appropriées. En continuant à utiliser le chatbot après de telles modifications, l'utilisateur accepte les nouvelles conditions. Toutefois, nous ne sommes pas responsables des conséquences résultant de ces modifications.</p>
-
       <h2 class="text-xl font-semibold mt-4 mb-2">7. Droits de propriété intellectuelle</h2>
       <p>Les utilisateurs reconnaissent que tous les droits de propriété intellectuelle relatifs au chatbot radiologique et à son contenu sont détenus exclusivement par nous. Aucune licence ni droit d'utilisation commerciale n'est accordé, sauf indication contraire dans les présentes CGU.</p>
-
       <h2 class="text-xl font-semibold mt-4 mb-2">8. Dispositions diverses</h2>
       <p>Les présentes conditions générales d'utilisation sont régies par les lois en vigueur en France. En cas de litige, les tribunaux compétents seront ceux de Grasse, ressort de notre siège social. Des dispositions spécifiques peuvent être ajoutées pour préciser la juridiction applicable et les mécanismes de règlement des litiges.</p>
     </div>
@@ -100,28 +92,16 @@
         Numéro de TVA intracommunautaire : Non applicable<br>
         Directeur ou responsable de la publication : MATA SASU
       </p>
-
       <h2 class="text-xl font-semibold mt-4 mb-2">2. Informations sur l'hébergement</h2>
       <p>Nom de l'hébergeur : Hébergeur HDS Français</p>
-
       <h2 class="text-xl font-semibold mt-4 mb-2">3. Propriété intellectuelle</h2>
-      <p>
-        Le contenu du site, y compris textes, images, vidéos, logos, graphiques, icônes et autres éléments de design, est la propriété exclusive de MATA MEDICAL DATA ou de ses partenaires. Toute reproduction, modification, publication ou transmission sans autorisation est strictement interdite.
-      </p>
-
+      <p>Le contenu du site, y compris textes, images, vidéos, logos, graphiques, icônes et autres éléments de design, est la propriété exclusive de MATA MEDICAL DATA ou de ses partenaires. Toute reproduction, modification, publication ou transmission sans autorisation est strictement interdite.</p>
       <h2 class="text-xl font-semibold mt-4 mb-2">4. Données personnelles</h2>
-      <p>
-        Le site collecte et stocke certaines données personnelles conformément au RGPD. Ces données peuvent être supprimées à tout moment par l'utilisateur via une fonction dédiée. Elles ne sont utilisées qu’à la gestion des sessions utilisateurs.
-      </p>
-
+      <p>Le site collecte et stocke certaines données personnelles conformément au RGPD. Ces données peuvent être supprimées à tout moment par l'utilisateur via une fonction dédiée. Elles ne sont utilisées qu’à la gestion des sessions utilisateurs.</p>
       <h2 class="text-xl font-semibold mt-4 mb-2">5. Cookies</h2>
       <p>Ce site utilise uniquement des cookies techniques nécessaires à la gestion des sessions utilisateurs.</p>
-
       <h2 class="text-xl font-semibold mt-4 mb-2">6. Responsabilité</h2>
-      <p>
-        MATA MEDICAL DATA met tout en œuvre pour fournir des informations précises et à jour. Toutefois, l'utilisateur reconnaît utiliser ces informations sous sa responsabilité.
-      </p>
-
+      <p>MATA MEDICAL DATA met tout en œuvre pour fournir des informations précises et à jour. Toutefois, l'utilisateur reconnaît utiliser ces informations sous sa responsabilité.</p>
       <h2 class="text-xl font-semibold mt-4 mb-2">7. Droit applicable et attribution de juridiction</h2>
       <p>Les présentes mentions légales sont régies par le droit français. En cas de litige, la compétence est attribuée exclusivement aux tribunaux compétents de Grasse.</p>
     </div>
@@ -131,10 +111,8 @@
       <h1 class="text-2xl font-bold mb-4">Nous Contacter</h1>
       <h2 class="text-xl font-semibold mt-4 mb-2">1. Informations de contact</h2>
       <p>Adresse e-mail : contact&#64;mata-network.com</p>
-
       <h2 class="text-xl font-semibold mt-4 mb-2">2. Adresse</h2>
       <p>Adresse du siège social : 1047 Route Des Dolines, C/o Business Pôle, 1 Allée Pierre Ziller, 06560 Valbonne</p>
-
       <h2 class="text-xl font-semibold mt-4 mb-2">3. Formulaire de contact</h2>
       <p>Vous pouvez nous contacter directement via notre formulaire de contact disponible sur le site.</p>
     </div>
