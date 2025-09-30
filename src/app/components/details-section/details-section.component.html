@@ -102,29 +102,30 @@
       </div>
     </div>
   </div>
+</section>
 
-  <!-- Modal -->
+<!-- Modal -->
+<div 
+  *ngIf="isModalOpen" 
+  class="modal"
+  (click)="closeModal()"
+>
+  <!-- Modal Content -->
   <div 
-    *ngIf="isModalOpen" 
-    class="modal"
-    (click)="closeModal()"
+    class="modal-content"
+    (click)="$event.stopPropagation()"
   >
-    <!-- Modal Content -->
-    <div 
-      class="modal-content"
-      (click)="$event.stopPropagation()"
-    >
-      <!-- Close Button -->
-      <span 
-        (click)="closeModal()"
-        class="close"
-        aria-label="Fermer"
-      >&times;</span>
+    <!-- Close Button -->
+    <span 
+      (click)="closeModal()"
+      class="close"
+      aria-label="Fermer"
+    >&times;</span>
 
-      <h2>Votre démo personnalisée</h2>
-      <p>Présentée par nos experts radiologues</p>
+    <h2>Votre démo personnalisée</h2>
+    <p>Présentée par nos experts radiologues</p>
 
-      <!-- Form -->
+    <!-- Form -->
     <div class="p-6">
       <form [formGroup]="contactForm" (ngSubmit)="onContactSubmit()">
         <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
@@ -171,27 +172,27 @@
           ></textarea>
         </div>
 
-            <!-- Benefits -->
-            <div class="bg-pulse-50 rounded-xl p-4 mt-6">
-              <h4 class="font-semibold text-gray-800 mb-2">Ce que vous découvrirez :</h4>
-              <ul class="text-sm text-gray-700 space-y-1">
-                <li>• Interface d'aide à la rédaction de CR</li>
-                <li>• Base de connaissances radiologique complète</li>
-                <li>• Module d'anatomie multimodale</li>
-                <li>• Agent IA connecté au web médical</li>
-              </ul>
-            </div>
+        <!-- Benefits -->
+        <div class="bg-pulse-50 rounded-xl p-4 mt-6">
+          <h4 class="font-semibold text-gray-800 mb-2">Ce que vous découvrirez :</h4>
+          <ul class="text-sm text-gray-700 space-y-1">
+            <li>• Interface d'aide à la rédaction de CR</li>
+            <li>• Base de connaissances radiologique complète</li>
+            <li>• Module d'anatomie multimodale</li>
+            <li>• Agent IA connecté au web médical</li>
+          </ul>
+        </div>
 
-            <div class="pt-2">
-              <button type="submit" class="w-full px-6 py-4 bg-pulse-500 hover:bg-pulse-600 text-white font-semibold rounded-xl transition-all duration-300 transform hover:scale-[1.02] shadow-lg hover:shadow-xl">
-                Demander ma démonstration gratuite
-              </button>
-            </div>
+        <div class="pt-2">
+          <button type="submit" class="w-full px-6 py-4 bg-pulse-500 hover:bg-pulse-600 text-white font-semibold rounded-xl transition-all duration-300 transform hover:scale-[1.02] shadow-lg hover:shadow-xl">
+            Demander ma démonstration gratuite
+          </button>
+        </div>
 
-            <p class="text-xs text-gray-500 text-center mt-4">
-              Démonstration de 30 minutes avec un expert radiologue • Sans engagement
-            </p>
+        <p class="text-xs text-gray-500 text-center mt-4">
+          Démonstration de 30 minutes avec un expert radiologue • Sans engagement
+        </p>
       </form>
     </div>
   </div>
-</section>
+</div>
