@@ -10,40 +10,41 @@
   height: 100%;
   overflow: auto;
   background-color: rgba(0, 0, 0, 0.4);
+  
 }
 
 .modal-content {
-  background-color: #010e1d;  /* couleur fond bleu sombre */
-  color: white;  /* texte blanc */
+  background-color: #010e1d;  // Utiliser la couleur de fond bleu sombre du background général de la page
+  color: white;  // Texte blanc
   margin: auto;
   padding: 20px;
-  border: 2px solid #001ecb;  /* bordure néon */
-  border-radius: 15px;
-  width: 66.67%;
+  border: 2px solid #001ecb;  // Bordure bleu électrique sombre néon
+  border-radius: 15px;  // Bordures arrondies
+  width: 66.67%;  // 2/3 de la page
   max-width: 800px;
-  max-height: 80%;
-  overflow-y: auto;
-  text-align: center;
-  font-family: 'Roboto', sans-serif;
-  font-size: 14px;
-  box-shadow: 0 0 10px #001ecb;
-  scrollbar-width: none;
+  max-height: 80%;  // Limite la hauteur pour permettre le défilement
+  overflow-y: auto;  // Permet le défilement vertical
+  text-align: center;  // Centrer le texte
+  font-family: 'Roboto', sans-serif;  // Utiliser la police Roboto
+  font-size: 14px;  // Réduire la taille du texte
+  box-shadow: 0 0 10px #001ecb;  // Effet de lumière sur les bordures
+  scrollbar-with:none;
 }
 
 .modal-content::-webkit-scrollbar {
-  display: none; /* Chrome, Safari et Opera */
+  display: none; /* pour Chrome, Safari et Opera */
 }
 
 .close {
-  color: #ffffff; /* blanc */
+  color: #ffffff;  // Blanc pétant pour le bouton de fermeture
   float: right;
-  font-size: 24px;
+  font-size: 24px;  // Taille du texte réduite
   font-weight: bold;
 }
 
 .close:hover,
 .close:focus {
-  color: #ff0000; /* rouge au survol */
+  color: #ff0000;  // Rouge pour le survol et le focus
   text-decoration: none;
   cursor: pointer;
 }
