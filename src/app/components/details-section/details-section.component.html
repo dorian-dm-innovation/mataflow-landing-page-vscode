@@ -1,6 +1,6 @@
 <section 
   id="details"
-  class="w-full bg-gradient-to-b from-pulse-950 to-pulse-900 text-white py-12 sm:py-20"
+  class="w-full bg-gradient-to-b from-pulse-950 to-pulse-900 text-white py-10 sm:py-12 md:py-16 lg:py-20"
   [ngStyle]="isBrowser ? {
     'background-image': 'linear-gradient(rgba(12,65,139,0.95), rgba(0,25,61,0.95)), url(' + networkBanner2 + ')',
     'background-size': 'cover',
@@ -12,26 +12,26 @@
     'background-position': 'center'
   }"
 >
-  <div class="container px-4 sm:px-6 lg:px-8 mx-auto">
+  <div class="container px-4 sm:px-6 lg:px-8 mx-auto max-w-7xl">
     <!-- Header -->
-    <div class="text-center mb-8 sm:mb-12">
-      <div class="pulse-chip mx-auto mb-4">
+    <div class="text-center mb-6 sm:mb-8 md:mb-12">
+      <div class="pulse-chip mx-auto mb-3 sm:mb-4">
         <span>Démo</span>
       </div>
-      <h2 class="text-3xl sm:text-4xl md:text-5xl font-display font-bold text-white mb-4">
+      <h2 class="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-display font-bold text-white mb-3 sm:mb-4 px-2">
         Demandez une démonstration
       </h2>
-      <p class="text-lg text-gray-200 max-w-4xl mx-auto leading-relaxed mb-8">
+      <p class="text-sm sm:text-base md:text-lg text-gray-200 max-w-4xl mx-auto leading-relaxed mb-6 sm:mb-8 px-4">
         Découvrez comment Mata peut transformer votre pratique radiologique avec une démonstration personnalisée de 30 minutes.
       </p>
       
       <!-- CTA Button to open modal -->
       <button 
         (click)="openModal()"
-        class="bg-gradient-to-r from-cyan-400 to-blue-500 hover:from-cyan-300 hover:to-blue-400 text-white font-semibold py-4 px-8 rounded-full transition-all duration-300 transform hover:scale-105 active:scale-95 shadow-[0_0_20px_rgba(6,182,212,0.4)] hover:shadow-[0_0_30px_rgba(6,182,212,0.6)] border border-cyan-300/30 backdrop-blur-sm group"
+        class="w-full sm:w-auto bg-gradient-to-r from-cyan-400 to-blue-500 hover:from-cyan-300 hover:to-blue-400 text-white font-semibold py-3 sm:py-4 px-6 sm:px-8 rounded-full transition-all duration-300 transform hover:scale-105 active:scale-95 shadow-[0_0_20px_rgba(6,182,212,0.4)] hover:shadow-[0_0_30px_rgba(6,182,212,0.6)] border border-cyan-300/30 backdrop-blur-sm group text-sm sm:text-base"
       >
         Demander ma démonstration gratuite
-        <svg class="ml-2 w-4 h-4 transition-transform group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <svg class="ml-2 w-3 h-3 sm:w-4 sm:h-4 transition-transform group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
         </svg>
       </button>
@@ -39,30 +39,30 @@
 
     <!-- Benefits Preview -->
     <div class="max-w-4xl mx-auto">
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-        <div class="bg-pulse-500/10 backdrop-blur-sm rounded-xl p-6 border border-pulse-400/20">
-          <h3 class="font-semibold text-white mb-3">Ce que vous découvrirez :</h3>
-          <ul class="text-gray-200 space-y-2">
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6 px-4">
+        <div class="bg-pulse-500/10 backdrop-blur-sm rounded-xl p-4 sm:p-6 border border-pulse-400/20">
+          <h3 class="font-semibold text-white mb-2 sm:mb-3 text-sm sm:text-base">Ce que vous découvrirez :</h3>
+          <ul class="text-gray-200 space-y-1 sm:space-y-2 text-xs sm:text-sm">
             <li class="flex items-center">
-              <svg class="w-4 h-4 text-cyan-400 mr-2" fill="currentColor" viewBox="0 0 20 20">
+              <svg class="w-3 h-3 sm:w-4 sm:h-4 text-cyan-400 mr-2 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
                 <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
               </svg>
               Interface d'aide à la rédaction de CR
             </li>
             <li class="flex items-center">
-              <svg class="w-4 h-4 text-cyan-400 mr-2" fill="currentColor" viewBox="0 0 20 20">
+              <svg class="w-3 h-3 sm:w-4 sm:h-4 text-cyan-400 mr-2 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
                 <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
               </svg>
               Base de connaissances radiologique complète
             </li>
             <li class="flex items-center">
-              <svg class="w-4 h-4 text-cyan-400 mr-2" fill="currentColor" viewBox="0 0 20 20">
+              <svg class="w-3 h-3 sm:w-4 sm:h-4 text-cyan-400 mr-2 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
                 <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
               </svg>
               Module d'anatomie multimodale
             </li>
             <li class="flex items-center">
-              <svg class="w-4 h-4 text-cyan-400 mr-2" fill="currentColor" viewBox="0 0 20 20">
+              <svg class="w-3 h-3 sm:w-4 sm:h-4 text-cyan-400 mr-2 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
                 <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
               </svg>
               Agent IA connecté au web médical
@@ -70,29 +70,29 @@
           </ul>
         </div>
         
-        <div class="bg-pulse-500/10 backdrop-blur-sm rounded-xl p-6 border border-pulse-400/20">
-          <h3 class="font-semibold text-white mb-3">Pourquoi choisir Mata :</h3>
-          <ul class="text-gray-200 space-y-2">
+        <div class="bg-pulse-500/10 backdrop-blur-sm rounded-xl p-4 sm:p-6 border border-pulse-400/20">
+          <h3 class="font-semibold text-white mb-2 sm:mb-3 text-sm sm:text-base">Pourquoi choisir Mata :</h3>
+          <ul class="text-gray-200 space-y-1 sm:space-y-2 text-xs sm:text-sm">
             <li class="flex items-center">
-              <svg class="w-4 h-4 text-emerald-400 mr-2" fill="currentColor" viewBox="0 0 20 20">
+              <svg class="w-3 h-3 sm:w-4 sm:h-4 text-emerald-400 mr-2 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
                 <path fill-rule="evenodd" d="M2.166 4.999A11.954 11.954 0 0010 1.944 11.954 11.954 0 0017.834 5c.11.65.166 1.32.166 2.001 0 5.225-3.34 9.67-8 11.317C5.34 16.67 2 12.225 2 7c0-.682.057-1.35.166-2.001zm11.541 3.708a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
               </svg>
               Label "Garantie Humaine"
             </li>
             <li class="flex items-center">
-              <svg class="w-4 h-4 text-emerald-400 mr-2" fill="currentColor" viewBox="0 0 20 20">
+              <svg class="w-3 h-3 sm:w-4 sm:h-4 text-emerald-400 mr-2 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
                 <path fill-rule="evenodd" d="M2.166 4.999A11.954 11.954 0 0010 1.944 11.954 11.954 0 0017.834 5c.11.65.166 1.32.166 2.001 0 5.225-3.34 9.67-8 11.317C5.34 16.67 2 12.225 2 7c0-.682.057-1.35.166-2.001zm11.541 3.708a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
               </svg>
               Hébergement HDS certifié
             </li>
             <li class="flex items-center">
-              <svg class="w-4 h-4 text-emerald-400 mr-2" fill="currentColor" viewBox="0 0 20 20">
+              <svg class="w-3 h-3 sm:w-4 sm:h-4 text-emerald-400 mr-2 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
                 <path fill-rule="evenodd" d="M2.166 4.999A11.954 11.954 0 0010 1.944 11.954 11.954 0 0017.834 5c.11.65.166 1.32.166 2.001 0 5.225-3.34 9.67-8 11.317C5.34 16.67 2 12.225 2 7c0-.682.057-1.35.166-2.001zm11.541 3.708a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
               </svg>
               500+ radiologues utilisateurs
             </li>
             <li class="flex items-center">
-              <svg class="w-4 h-4 text-emerald-400 mr-2" fill="currentColor" viewBox="0 0 20 20">
+              <svg class="w-3 h-3 sm:w-4 sm:h-4 text-emerald-400 mr-2 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
                 <path fill-rule="evenodd" d="M2.166 4.999A11.954 11.954 0 0010 1.944 11.954 11.954 0 0017.834 5c.11.65.166 1.32.166 2.001 0 5.225-3.34 9.67-8 11.317C5.34 16.67 2 12.225 2 7c0-.682.057-1.35.166-2.001zm11.541 3.708a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
               </svg>
               Démonstration de 30 minutes
@@ -112,7 +112,7 @@
 >
   <!-- Modal Content -->
   <div 
-    class="modal-content"
+    class="modal-content w-11/12 sm:w-4/5 md:w-2/3 max-w-4xl"
     (click)="$event.stopPropagation()"
   >
     <!-- Close Button -->
@@ -122,60 +122,60 @@
       aria-label="Fermer"
     >&times;</span>
 
-    <h2>Votre démo personnalisée</h2>
-    <p>Présentée par nos experts radiologues</p>
+    <h2 class="text-xl sm:text-2xl">Votre démo personnalisée</h2>
+    <p class="text-sm sm:text-base">Présentée par nos experts radiologues</p>
 
     <!-- Form -->
-    <div class="p-6">
+    <div class="p-4 sm:p-6">
       <form [formGroup]="contactForm" (ngSubmit)="onContactSubmit()">
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4 mb-3 sm:mb-4">
           <div>
-            <label class="block text-sm font-medium text-gray-300 mb-2">Nom complet *</label>
+            <label class="block text-xs sm:text-sm font-medium text-gray-300 mb-1 sm:mb-2">Nom complet *</label>
             <input 
               type="text"
               formControlName="fullName"
               placeholder="Dr. Nom Prénom"
-              class="w-full px-4 py-3 bg-gray-800 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent transition-all duration-200"
+              class="w-full px-3 sm:px-4 py-2 sm:py-3 bg-gray-800 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent transition-all duration-200 text-sm sm:text-base"
               required
             />
           </div>
 
           <div>
-            <label class="block text-sm font-medium text-gray-300 mb-2">Email professionnel *</label>
+            <label class="block text-xs sm:text-sm font-medium text-gray-300 mb-1 sm:mb-2">Email professionnel *</label>
             <input 
               type="email"
               formControlName="email"
               placeholder="email@hopital.fr"
-              class="w-full px-4 py-3 bg-gray-800 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent transition-all duration-200"
+              class="w-full px-3 sm:px-4 py-2 sm:py-3 bg-gray-800 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent transition-all duration-200 text-sm sm:text-base"
               required
             />
           </div>
         </div>
 
-        <div class="mb-4">
-          <label class="block text-sm font-medium text-gray-300 mb-2">Établissement (optionnel)</label>
+        <div class="mb-3 sm:mb-4">
+          <label class="block text-xs sm:text-sm font-medium text-gray-300 mb-1 sm:mb-2">Établissement (optionnel)</label>
           <input 
             type="text"
             formControlName="company"
             placeholder="CHU, Clinique, Cabinet..."
-            class="w-full px-4 py-3 bg-gray-800 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent transition-all duration-200"
+            class="w-full px-3 sm:px-4 py-2 sm:py-3 bg-gray-800 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent transition-all duration-200 text-sm sm:text-base"
           />
         </div>
 
-        <div class="mb-6">
-          <label class="block text-sm font-medium text-gray-300 mb-2">Message</label>
+        <div class="mb-4 sm:mb-6">
+          <label class="block text-xs sm:text-sm font-medium text-gray-300 mb-1 sm:mb-2">Message</label>
           <textarea 
             formControlName="message"
             placeholder="Votre message..."
-            rows="4"
-            class="w-full px-4 py-3 bg-gray-800 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent transition-all duration-200 resize-none"
+            rows="3"
+            class="w-full px-3 sm:px-4 py-2 sm:py-3 bg-gray-800 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent transition-all duration-200 resize-none text-sm sm:text-base"
           ></textarea>
         </div>
 
         <!-- Benefits -->
-        <div class="bg-pulse-50 rounded-xl p-4 mt-6">
-          <h4 class="font-semibold text-gray-800 mb-2">Ce que vous découvrirez :</h4>
-          <ul class="text-sm text-gray-700 space-y-1">
+        <div class="bg-pulse-50 rounded-xl p-3 sm:p-4 mt-4 sm:mt-6">
+          <h4 class="font-semibold text-gray-800 mb-1 sm:mb-2 text-sm sm:text-base">Ce que vous découvrirez :</h4>
+          <ul class="text-xs sm:text-sm text-gray-700 space-y-1">
             <li>• Interface d'aide à la rédaction de CR</li>
             <li>• Base de connaissances radiologique complète</li>
             <li>• Module d'anatomie multimodale</li>
@@ -183,13 +183,13 @@
           </ul>
         </div>
 
-        <div class="pt-2">
-          <button type="submit" class="w-full px-6 py-4 bg-pulse-500 hover:bg-pulse-600 text-white font-semibold rounded-xl transition-all duration-300 transform hover:scale-[1.02] shadow-lg hover:shadow-xl">
+        <div class="pt-1 sm:pt-2">
+          <button type="submit" class="w-full px-4 sm:px-6 py-3 sm:py-4 bg-pulse-500 hover:bg-pulse-600 text-white font-semibold rounded-xl transition-all duration-300 transform hover:scale-[1.02] shadow-lg hover:shadow-xl text-sm sm:text-base">
             Demander ma démonstration gratuite
           </button>
         </div>
 
-        <p class="text-xs text-gray-500 text-center mt-4">
+        <p class="text-xs text-gray-500 text-center mt-3 sm:mt-4">
           Démonstration de 30 minutes avec un expert radiologue • Sans engagement
         </p>
       </form>

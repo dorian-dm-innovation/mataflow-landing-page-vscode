@@ -1,37 +1,37 @@
 <!-- expert-committee-section.component.html -->
 <section
-  class="w-full py-12 sm:py-16 bg-gradient-to-b from-pulse-950 to-pulse-900 text-white relative"
+  class="w-full py-10 sm:py-12 md:py-16 lg:py-20 bg-gradient-to-b from-pulse-950 to-pulse-900 text-white relative"
   id="expert-committee"
   style="background-image: linear-gradient(rgba(12,65,139,0.95), rgba(0,25,61,0.95)), url('/assets/network-banner-1.jpg'); background-size: cover; background-attachment: fixed;"
 >
-  <div class="container mx-auto px-4">
+  <div class="container mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl">
     <!-- Header -->
-    <div class="text-center mb-12" appFadeIn>
-      <div class="pulse-chip mx-auto mb-6">
+    <div class="text-center mb-8 sm:mb-10 md:mb-12" appFadeIn>
+      <div class="pulse-chip mx-auto mb-4 sm:mb-6">
         <span>Excellence académique</span>
       </div>
-      <h2 class="text-4xl font-bold mb-6">
-        Comité d'experts et <span class="text-transparent bg-clip-text bg-gradient-to-r from-amber-400 via-cyan-400 to-purple-500 animate-pulse">validation scientifique</span>
+      <h2 class="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-4 sm:mb-6 px-2">
+        Comité d'experts et <span class="block sm:inline text-transparent bg-clip-text bg-gradient-to-r from-amber-400 via-cyan-400 to-purple-500 animate-pulse">validation scientifique</span>
       </h2>
-      <p class="text-lg text-gray-200 max-w-4xl mx-auto">
+      <p class="text-sm sm:text-base md:text-lg text-gray-200 max-w-4xl mx-auto px-4">
         Mata Medical Data s'appuie sur l'expertise des plus grands professeurs de radiologie de France. Notre comité scientifique garantit la justesse et la pertinence de chaque fonctionnalité.
       </p>
     </div>
 
     <!-- Grid -->
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-6 mb-8 sm:mb-10 md:mb-12">
       <div *ngFor="let expert of experts; let i = index" 
-           class="group relative overflow-hidden rounded-xl backdrop-blur-sm transition-all duration-500 hover:scale-105 p-6 h-full bg-gradient-to-br from-pulse-900/60 to-pulse-800/60"
+           class="group relative overflow-hidden rounded-xl backdrop-blur-sm transition-all duration-500 hover:scale-105 p-4 sm:p-6 h-full bg-gradient-to-br from-pulse-900/60 to-pulse-800/60"
            [style.animation-delay]="(0.05 * (i + 1)) + 's'">
         
         <div class="absolute inset-0 opacity-5 bg-cover bg-center" style="background-image: url('/assets/network-icon-3.jpg')"></div>
 
         <div class="relative z-10 h-full flex flex-col">
-          <div class="flex items-start gap-4 mb-4">
-            <div class="w-14 h-14 rounded-full bg-white/10 flex items-center justify-center font-bold text-white shadow-lg text-sm">
+          <div class="flex items-start gap-3 sm:gap-4 mb-3 sm:mb-4">
+            <div class="w-10 h-10 sm:w-12 sm:h-12 md:w-14 md:h-14 rounded-full bg-white/10 flex items-center justify-center font-bold text-white shadow-lg text-xs sm:text-sm">
               {{ expert.initials }}
             </div>
-            <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full backdrop-blur-sm text-xs font-medium"
+            <div class="inline-flex items-center gap-1 sm:gap-2 px-2 sm:px-3 py-1 rounded-full backdrop-blur-sm text-xs font-medium"
                  [ngClass]="getExpertStyle(expert.level).badge">
               
               <span>{{ getExpertLevelText(expert.level) }}</span>
@@ -39,9 +39,9 @@
           </div>
 
           <div class="flex-grow">
-            <h4 [ngClass]="getExpertStyle(expert.level).name" class="text-lg font-bold mb-2">{{ expert.name }}</h4>
-            <p class="text-white/80 font-medium mb-2 text-sm">{{ expert.role }}</p>
-            <p class="text-white/60 text-sm mb-3">{{ expert.institution }}</p>
+            <h4 [ngClass]="getExpertStyle(expert.level).name" class="text-sm sm:text-base md:text-lg font-bold mb-1 sm:mb-2">{{ expert.name }}</h4>
+            <p class="text-white/80 font-medium mb-1 sm:mb-2 text-xs sm:text-sm">{{ expert.role }}</p>
+            <p class="text-white/60 text-xs sm:text-sm mb-2 sm:mb-3">{{ expert.institution }}</p>
             <p class="text-white/50 text-xs italic">Spécialité : {{ expert.speciality }}</p>
           </div>
         </div>
@@ -51,18 +51,18 @@
     </div>
 
     <!-- CTA -->
-    <div class="text-center mt-8" appFadeIn>
-      <div class="flex flex-col sm:flex-row gap-4 justify-center">
+    <div class="text-center mt-6 sm:mt-8" appFadeIn>
+      <div class="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center px-4">
         <a 
           href="https://mata-md.com" 
-          class="button-primary" 
+          class="button-primary w-full sm:w-auto py-3 sm:py-4 px-6 sm:px-8 text-sm sm:text-base" 
           target="_blank" 
           rel="noopener noreferrer"
         >
           Demander un accès →
         </a>
 
-        <a href="#trust-database" class="button-secondary">Découvrir nos garanties</a>
+        <a href="#trust-database" class="button-secondary w-full sm:w-auto py-3 sm:py-4 px-6 sm:px-8 text-sm sm:text-base">Découvrir nos garanties</a>
       </div>
     </div>
   </div>

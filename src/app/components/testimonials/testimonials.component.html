@@ -1,5 +1,5 @@
 <section
-  class="py-12 bg-gradient-to-b from-pulse-950 to-pulse-900 text-white relative"
+  class="py-10 sm:py-12 md:py-16 lg:py-20 bg-gradient-to-b from-pulse-950 to-pulse-900 text-white relative"
   id="testimonials"
   [ngStyle]="{
     'background-image': 'linear-gradient(rgba(12,65,139,0.95), rgba(0,25,61,0.95)), url(/assets/background-section3.png)',
@@ -8,26 +8,26 @@
     'background-attachment': 'fixed'
   }"
 >
-  <div class="section-container">
-    <div class="flex items-center gap-4 mb-6">
+  <div class="container px-4 sm:px-6 lg:px-8 mx-auto max-w-7xl py-8 md:py-12">
+    <div class="flex items-center gap-4 mb-4 sm:mb-6">
       <div class="pulse-chip">
         <span>Témoignages</span>
       </div>
     </div>
 
-    <h2 class="text-5xl font-display font-bold mb-12 text-left">Témoignages</h2>
+    <h2 class="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-display font-bold mb-8 sm:mb-10 md:mb-12 text-left px-2">Témoignages</h2>
 
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 lg:gap-8">
       <div *ngFor="let t of testimonials"
-           class="rounded-2xl p-8 h-full flex flex-col justify-between text-white transform transition-transform duration-300 hover:-translate-y-2 relative overflow-hidden bg-gradient-to-br from-pulse-950 via-pulse-900 to-pulse-800 shadow-xl">
+           class="rounded-xl sm:rounded-2xl p-4 sm:p-6 md:p-8 h-full flex flex-col justify-between text-white transform transition-transform duration-300 hover:-translate-y-2 relative overflow-hidden bg-gradient-to-br from-pulse-950 via-pulse-900 to-pulse-800 shadow-xl">
         <div class="relative z-0">
-          <p class="text-xl mb-8 font-playfair font-medium leading-relaxed">
+          <p class="text-sm sm:text-base md:text-lg lg:text-xl mb-4 sm:mb-6 md:mb-8 font-playfair font-medium leading-relaxed">
             "{{ t.content }}"
           </p>
         </div>
         <div class="text-right">
-          <h4 class="font-semibold text-pulse-400 text-lg">{{ t.author }}</h4>
-          <p class="text-white/80 text-sm">{{ t.role }}</p>
+          <h4 class="font-semibold text-pulse-400 text-sm sm:text-base md:text-lg">{{ t.author }}</h4>
+          <p class="text-white/80 text-xs sm:text-sm">{{ t.role }}</p>
         </div>
       </div>
     </div>

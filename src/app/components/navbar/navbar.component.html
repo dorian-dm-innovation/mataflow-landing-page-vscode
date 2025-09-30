@@ -2,7 +2,7 @@
   'fixed top-0 left-0 right-0 z-40 py-2 sm:py-3 md:py-4 transition-all duration-300 bg-gradient-to-b from-gray-500/95 to-gray-600/95 backdrop-blur-md shadow-lg border-b border-gray-400/50': true,
   'shadow-xl': isScrolled
 }">
-  <div class="container flex items-center justify-between px-4 sm:px-6 lg:px-8">
+  <div class="container flex items-center justify-between px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
     <a 
       (click)="scrollToTop()" 
       class="flex items-center space-x-2 cursor-pointer"
@@ -11,25 +11,25 @@
       <img 
         src="assets/lovable-uploads/a03498d1-c8e9-4fd1-8060-e49932eee010.png" 
         alt="Logo Mata Medical Data" 
-        class="h-10 sm:h-12 md:h-14" 
+        class="h-8 sm:h-10 md:h-12 lg:h-14" 
       />
     </a>
       
        
     <!-- Desktop Navigation -->
-    <nav class="hidden md:flex space-x-8">
-      <a (click)="navigateTo('/')" class="nav-link-header">Mata MD</a>
+    <nav class="hidden lg:flex space-x-4 xl:space-x-8">
+      <a (click)="navigateTo('/')" class="nav-link-header text-sm xl:text-base">Mata MD</a>
       <!-- <a href="#made-by-humans" class="nav-link-header">Concept</a> -->
-      <a href="#expert-committee" class="nav-link-header">Votre assistant IA</a>
-      <a href="#features" class="nav-link-header">Comité Scientifique</a>
-      <a href="#trust-database" class="nav-link-header">Données de confiance</a>
-      <a href="#testimonials" class="nav-link-header">L'avis des experts</a>
-      <a href="#details" class="nav-link-header">Demander ma démo</a>
-      <a href="#footer" class="nav-link-header">À propos</a>
+      <a href="#expert-committee" class="nav-link-header text-sm xl:text-base">Votre assistant IA</a>
+      <a href="#features" class="nav-link-header text-sm xl:text-base">Comité Scientifique</a>
+      <a href="#trust-database" class="nav-link-header text-sm xl:text-base">Données de confiance</a>
+      <a href="#testimonials" class="nav-link-header text-sm xl:text-base">L'avis des experts</a>
+      <a href="#details" class="nav-link-header text-sm xl:text-base">Demander ma démo</a>
+      <a href="#footer" class="nav-link-header text-sm xl:text-base">À propos</a>
     </nav>
     
     <!-- Desktop Language selector -->
-    <div class="hidden md:flex items-center">
+    <div class="hidden lg:flex items-center">
       <div class="language-selector">
         <img src="assets/login-image/world-language.svg" alt="Langue" class="w-4 h-4 text-white">
         <select (change)="ChangeLang($event)" class="language-select">
@@ -45,7 +45,7 @@
 
     <!-- Mobile menu button -->
     <button 
-      class="md:hidden text-gray-200 hover:text-white p-3 focus:outline-none" 
+      class="lg:hidden text-gray-200 hover:text-white p-2 sm:p-3 focus:outline-none" 
       (click)="toggleMenu()"
       [attr.aria-label]="isMenuOpen ? 'Close menu' : 'Open menu'"
     >
@@ -59,7 +59,7 @@
   </div>
 
   <!-- Mobile Navigation Wrapper -->
-<div class="fixed inset-0 z-40 md:hidden" *ngIf="isMenuOpen">
+<div class="fixed inset-0 z-40 lg:hidden" *ngIf="isMenuOpen">
   <!-- Overlay -->
   <div 
     class="absolute inset-0 bg-black/50 transition-opacity duration-300"
@@ -67,9 +67,9 @@
   ></div>
 
   <!-- Panel -->
-  <div class="absolute inset-y-0 right-0 w-3/4 bg-gray-800 bg-opacity-100 text-white flex flex-col pt-16 px-6 transition-transform duration-300 ease-in-out z-40">
+  <div class="absolute inset-y-0 right-0 w-4/5 sm:w-3/4 md:w-2/3 bg-gray-800 bg-opacity-100 text-white flex flex-col pt-12 sm:pt-16 px-4 sm:px-6 transition-transform duration-300 ease-in-out z-40">
     <button 
-      class="self-end text-gray-200 hover:text-white p-3 mb-4 focus:outline-none" 
+      class="self-end text-gray-200 hover:text-white p-2 sm:p-3 mb-3 sm:mb-4 focus:outline-none" 
       (click)="closeMobileMenu()"
       aria-label="Close menu"
     >
@@ -79,7 +79,7 @@
     </button>
 
     <!-- Mobile Language Selector -->
-    <div class="mb-6 flex justify-center">
+    <div class="mb-4 sm:mb-6 flex justify-center">
       <div class="language-selector">
         <img src="assets/login-image/world-language.svg" alt="Langue" class="w-4 h-4 text-white">
         <select (change)="ChangeLang($event)" class="language-select">
@@ -93,7 +93,7 @@
       </div>
     </div>
 
-    <nav class="flex flex-col space-y-8 items-center mt-4">
+    <nav class="flex flex-col space-y-4 sm:space-y-6 md:space-y-8 items-center mt-2 sm:mt-4">
       <a *ngFor="let item of [
         { label: 'Home', href: '/' },
         { label: 'Concept', href: '#made-by-humans' },
@@ -105,7 +105,7 @@
         { label: 'À propos', href: '/about' },
         { label: 'Démo interactive', href: '/demo' }
       ]" 
-      class="text-xl font-medium py-3 px-6 w-full text-center rounded-lg text-gray-200 hover:text-white hover:bg-gray-400/50 cursor-pointer"
+      class="text-base sm:text-lg md:text-xl font-medium py-2 sm:py-3 px-4 sm:px-6 w-full text-center rounded-lg text-gray-200 hover:text-white hover:bg-gray-400/50 cursor-pointer transition-all duration-200"
       (click)="item.href.startsWith('/') ? navigateTo(item.href) : closeMobileMenu()">
         {{ item.label }}
       </a>
@@ -119,12 +119,12 @@
 <button 
   *ngIf="showScrollToTop"
   (click)="scrollToTop()"
-  class="fixed bottom-8 right-8 z-50 w-12 h-12 bg-gradient-to-r from-cyan-400 to-blue-500 hover:from-cyan-300 hover:to-blue-400 text-white rounded-full shadow-[0_0_20px_rgba(6,182,212,0.4)] hover:shadow-[0_0_30px_rgba(6,182,212,0.6)] transition-all duration-300 transform hover:scale-110 active:scale-95 backdrop-blur-sm border border-cyan-300/30 group"
+  class="fixed bottom-4 right-4 sm:bottom-6 sm:right-6 md:bottom-8 md:right-8 z-50 w-10 h-10 sm:w-12 sm:h-12 bg-gradient-to-r from-cyan-400 to-blue-500 hover:from-cyan-300 hover:to-blue-400 text-white rounded-full shadow-[0_0_20px_rgba(6,182,212,0.4)] hover:shadow-[0_0_30px_rgba(6,182,212,0.6)] transition-all duration-300 transform hover:scale-110 active:scale-95 backdrop-blur-sm border border-cyan-300/30 group"
   aria-label="Remonter en haut de la page"
 >
   <svg 
     xmlns="http://www.w3.org/2000/svg" 
-    class="w-6 h-6 mx-auto transition-transform duration-300 group-hover:-translate-y-1" 
+    class="w-4 h-4 sm:w-6 sm:h-6 mx-auto transition-transform duration-300 group-hover:-translate-y-1" 
     fill="none" 
     viewBox="0 0 24 24" 
     stroke="currentColor" 
