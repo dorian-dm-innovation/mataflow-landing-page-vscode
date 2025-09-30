@@ -53,11 +53,11 @@ export class FeaturesComponent implements AfterViewInit {
 
   openModal(content: string): void {
     this.modalContent = content;
-    this.isModalOpen = true;
+    this.isVideoModalOpen = true;
   }
 
   closeModal(): void {
-    this.isModalOpen = false;
+    this.isVideoModalOpen = false;
   }
   
   ngAfterViewInit(): void {
