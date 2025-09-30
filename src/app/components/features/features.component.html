@@ -66,8 +66,8 @@
       </div>
     </div>
   </div>
-
-  <!-- Modal vidéo -->
+</section>
+<!-- Modal vidéo -->
   <div *ngIf="isModalOpen && modalContent === 'video'" class="modal" (click)="closeModal()">
     <div class="modal-content" (click)="$event.stopPropagation()">
       <span class="close" (click)="closeModal()">&times;</span>
@@ -90,4 +90,3 @@
       </p>
     </div>
   </div>
-</section>
