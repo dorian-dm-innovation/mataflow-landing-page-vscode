@@ -8,7 +8,7 @@ import { CommonModule, isPlatformBrowser } from '@angular/common';
   imports: [CommonModule]
 })
 export class FeaturesComponent implements AfterViewInit {
-  isModalOpen = false;
+  isVideoModalOpen = false;
   modalContent: string = '';
   features = [
     {
