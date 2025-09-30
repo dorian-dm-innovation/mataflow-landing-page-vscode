@@ -51,7 +51,7 @@ export class FeaturesComponent implements AfterViewInit {
 
   constructor(private el: ElementRef, @Inject(PLATFORM_ID) private platformId: Object) {}
 
-  openModal(content: string): void {
+  openVideoModal(content: string): void {
     this.modalContent = content;
     this.isVideoModalOpen = true;
   }
