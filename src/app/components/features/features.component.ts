@@ -51,8 +51,6 @@ export class FeaturesComponent implements AfterViewInit {
 
   constructor(private el: ElementRef, @Inject(PLATFORM_ID) private platformId: Object) {}
 
-  isVideoModalOpen = false;
-
   openVideoModal(): void {
     this.isVideoModalOpen = true;
     document.body.style.overflow = 'hidden'; // bloque le scroll
