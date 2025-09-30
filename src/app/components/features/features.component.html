@@ -72,25 +72,25 @@
     </div>
   </div>
 
- <!-- Modal -->
-<div 
-  *ngIf="isModalOpen" 
-  class="modal"
-  (click)="closeModal()"
->
-  <!-- Modal Content -->
+   <!-- Modal -->
   <div 
-    class="modal-content"
-    (click)="$event.stopPropagation()"
+    *ngIf="isModalOpen" 
+    class="modal"
+    (click)="closeModal()"
   >
-    <!-- Close Button -->
-    <span 
-      (click)="closeModal()"
-      class="close"
-      aria-label="Fermer"
-    >&times;</span>
+    <!-- Modal Content -->
+    <div 
+      class="modal-content"
+      (click)="$event.stopPropagation()"
+    >
+      <!-- Close Button -->
+      <span 
+        (click)="closeModal()"
+        class="close"
+        aria-label="Fermer"
+      >&times;</span>
+    </div>
   </div>
-</div>
 
 
 </section>
