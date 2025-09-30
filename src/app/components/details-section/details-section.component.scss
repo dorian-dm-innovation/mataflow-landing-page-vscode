@@ -39,6 +39,15 @@
   color: white;
   cursor: pointer;
 }
+.close {
+  position: absolute;
+  top: 12px;
+  right: 16px;
+  font-size: 28px;
+  font-weight: bold;
+  color: white;
+  cursor: pointer;
+}
 
 .close:hover {
   color: #31b9ff;
