@@ -68,25 +68,24 @@
   </div>
 </section>
 <!-- Modal vidéo -->
-  <div *ngIf="isModalOpen" class="modal">
-    <div class="modal-content">
-     <span class="close" (click)="closeModal()">&times;</span>
-      <h2 class="text-2xl font-bold mb-6 text-white">Présentation de Mata</h2>
-      
-      <!-- Container vidéo responsive -->
-      <div class="relative w-full" style="padding-bottom: 56.25%; height: 0;">
-        <iframe 
-          class="absolute top-0 left-0 w-full h-full rounded-lg"
-          src="https://www.youtube.com/embed/KA3Q1duzwaE?rel=0&modestbranding=1&showinfo=0" 
-          title="Présentation vidéo Mata"
-          frameborder="0"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-          allowfullscreen>
-        </iframe>
-      </div>
-      
-      <p class="text-gray-300 text-sm mt-4 text-center">
-        Découvrez comment Mata révolutionne la pratique radiologique
-      </p>
+<div *ngIf="isModalOpen" class="modal">
+  <div class="modal-content">
+   <span class="close" (click)="closeModal()">&times;</span>
+    <h2 class="text-2xl font-bold mb-6 text-white">Présentation de Mata</h2>
+    
+    <div class="relative w-full" style="padding-bottom: 56.25%; height: 0;">
+      <iframe 
+        class="absolute top-0 left-0 w-full h-full rounded-lg"
+        src="https://www.youtube.com/embed/KA3Q1duzwaE?rel=0&modestbranding=1&showinfo=0"
+        title="Présentation vidéo Mata"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        allowfullscreen>
+      </iframe>
     </div>
+
+    <p class="text-gray-300 text-sm mt-4 text-center">
+      Découvrez comment Mata révolutionne la pratique radiologique
+    </p>
   </div>
+</div>
