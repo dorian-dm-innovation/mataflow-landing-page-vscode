@@ -71,6 +71,25 @@
         </div>
       </div>
     </div>
+    <!-- Modal -->
+  <div 
+    *ngIf="isVideoModalOpen" 
+    class="modal"
+    (click)="closeVideoModal()"
+  >
+    <!-- Modal Content -->
+    <div 
+      class="modal-content"
+      (click)="$event.stopPropagation()"
+    >
+      <!-- Close Button -->
+      <span 
+        (click)="closeVideoModal()"
+        class="close"
+        aria-label="Fermer"
+      >&times;</span>
+    </div>
+  </div>
   </div>
 
 
