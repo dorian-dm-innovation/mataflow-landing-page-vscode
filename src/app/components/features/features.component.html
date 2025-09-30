@@ -203,7 +203,58 @@
         </svg>
       </button>
 
-      
+      <!-- Video Modal -->
+<div *ngIf="isVideoModalOpen" class="modal fixed inset-0 z-50 flex items-center justify-center bg-black/80 backdrop-blur-sm" (click)="closeVideoModal()">
+  <div class="modal-content relative w-full max-w-3xl mx-4 bg-gray-900 rounded-2xl overflow-hidden shadow-2xl" (click)="$event.stopPropagation()">
+
+    <!-- Close Button -->
+    <button 
+      (click)="closeVideoModal()"
+      class="close absolute top-4 right-4 text-white text-2xl w-10 h-10 flex items-center justify-center bg-black/50 hover:bg-black/70 rounded-full transition-all duration-200 hover:scale-110"
+      aria-label="Fermer"
+    >
+      &times;
+    </button>
+
+    <!-- Video Header -->
+    <div class="p-6 pb-4 border-b border-gray-700">
+      <h3 class="text-2xl font-bold text-white mb-2">Présentation de Mata</h3>
+      <p class="text-gray-300">Découvrez comment Mata révolutionne la pratique radiologique</p>
+    </div>
+
+    <!-- Video Container -->
+    <div class="relative w-full" style="padding-bottom: 56.25%;">
+      <video 
+        class="absolute inset-0 w-full h-full"
+        controls
+        autoplay
+      >
+        <source src="assets/videos/demo.mp4" type="video/mp4">
+        Votre navigateur ne supporte pas la lecture vidéo.
+      </video>
+    </div>
+
+    <!-- Video Footer -->
+    <div class="p-6 pt-4 bg-gray-800">
+      <div class="flex flex-col sm:flex-row gap-4 justify-between items-center">
+        <div class="text-center sm:text-left">
+          <p class="text-gray-300 text-sm">
+            Vous souhaitez une démonstration personnalisée ?
+          </p>
+        </div>
+        <a 
+          href="#details" 
+          (click)="closeVideoModal()"
+          class="bg-gradient-to-r from-cyan-400 to-blue-500 hover:from-cyan-300 hover:to-blue-400 text-white font-semibold py-3 px-6 rounded-full transition-all duration-300 transform hover:scale-105"
+        >
+          Demander une démo
+        </a>
+      </div>
+    </div>
+
+  </div>
+</div>
+
     </div>
   </div>
 </section>
