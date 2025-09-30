@@ -76,7 +76,7 @@
   <div 
     *ngIf="isVideoModalOpen" 
     class="modal"
-    (click)="close()"
+    (click)="closeVideoModal()"
   >
     <!-- Modal Content -->
     <div 
@@ -85,7 +85,7 @@
     >
       <!-- Close Button -->
       <span 
-        (click)="closeModal()"
+        (click)="closeVideoModal()"
         class="close"
         aria-label="Fermer"
       >&times;</span>
