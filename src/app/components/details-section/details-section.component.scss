@@ -31,17 +31,17 @@
 }
 
 .close {
-  position: absolute;
-  top: 12px;
-  right: 16px;
-  font-size: 28px;
+  color: #ffffff;  // Blanc pétant pour le bouton de fermeture
+  float: right;
+  font-size: 24px;  // Taille du texte réduite
   font-weight: bold;
-  color: white;
-  cursor: pointer;
 }
 
-.close:hover {
-  color: #31b9ff;
+.close:hover,
+.close:focus {
+  color: #ff0000;  // Rouge pour le survol et le focus
+  text-decoration: none;
+  cursor: pointer;
 }
 
 .video-container {
