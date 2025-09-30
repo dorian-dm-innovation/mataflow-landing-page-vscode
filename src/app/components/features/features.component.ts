@@ -49,6 +49,15 @@ export class FeaturesComponent implements AfterViewInit {
 
   constructor(private el: ElementRef, @Inject(PLATFORM_ID) private platformId: Object) {}
 
+  openModal(content: string): void {
+    this.modalContent = content;
+    this.isModalOpen = true;
+  }
+
+  closeModal(): void {
+    this.isModalOpen = false;
+  }
+  
   ngAfterViewInit(): void {
     if (!isPlatformBrowser(this.platformId)) return;
 
