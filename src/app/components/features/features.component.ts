@@ -51,14 +51,18 @@ export class FeaturesComponent implements AfterViewInit {
 
   constructor(private el: ElementRef, @Inject(PLATFORM_ID) private platformId: Object) {}
 
-  openVideoModal(): void {
-    this.modalContent = content;
-    this.isVideoModalOpen = true;
-  }
+  isVideoModalOpen = false;
 
+  openVideoModal(): void {
+    this.isVideoModalOpen = true;
+    document.body.style.overflow = 'hidden'; // bloque le scroll
+  }
+  
   closeVideoModal(): void {
     this.isVideoModalOpen = false;
+    document.body.style.overflow = ''; // rétablit le scroll
   }
+
   
   ngAfterViewInit(): void {
     if (!isPlatformBrowser(this.platformId)) return;
