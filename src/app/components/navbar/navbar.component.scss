@@ -35,46 +35,31 @@ select {
 }
 
 .language-selector {
-  position: absolute;
-  top: 15px;
-  right: 10px;
   display: flex;
-  flex-direction: row;
   align-items: center;
-  z-index: 1000; /* Assurez-vous que le sélecteur est au premier plan */
-  background-color: transparent;
-  border: solid 1px #ffffff;
-  border-radius: 20px;
-  min-width: 100px;
-  min-height: 30px;
+  gap: 0.5rem; /* espace entre icône et select */
+  background-color: rgba(255,255,255,0.05);
+  border: 1px solid rgba(255,255,255,0.3);
+  border-radius: 9999px;
+  padding: 0.25rem 0.5rem;
 }
 
 .language-icon {
-  width: 24px;
-  height: 24px;
-  margin-right: 8px;
+  width: 1.5rem;
+  height: 1.5rem;
 }
 
 .language-select {
-  font-size: 13px;
+  background: transparent;
   border: none;
-  background: none;
-  color: #fff; /* Ajustez la couleur du texte selon vos besoins */
-  margin-left: 8px;
-  outline: none;
+  color: #fff;
+  font-size: 0.875rem;
   cursor: pointer;
-  appearance: none; /* Supprime les flèches de sélection par défaut */
-  -webkit-appearance: none; /* Supprime les flèches de sélection par défaut dans WebKit */
-  -moz-appearance: none; /* Supprime les flèches de sélection par défaut dans Firefox */
+  appearance: none;
+  outline: none;
   padding: 0;
-  line-height: 15px; /* Ajustez la hauteur de ligne pour centrer verticalement */
-  height: 50%; 
-  display: relative!important;
-  align-items: center!important; /* Centre verticalement le texte */
-  justify-content: center!important; /* Centre horizontalement le texte */
-  background-color: transparent; /* Assurez-vous que le fond est transparent */
-  -webkit-text-fill-color: #fff; /* Spécifique à WebKit pour forcer la couleur du texte */
 }
+
 
 .language-select option {
   background-color: #333; /* Fond pour les options */
