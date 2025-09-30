@@ -27,44 +27,39 @@
   transform-origin: left;
 }
 
-select {
-  position: absolute;
-  top: 10px;
-  left: 50%; /* Centrer horizontalement */
-  transform: translateX(-50%); /* Centrer horizontalement */
-}
-
 .language-selector {
   display: flex;
   align-items: center;
-  gap: 0.5rem; /* espace entre icône et select */
-  background-color: rgba(255,255,255,0.05);
-  border: 1px solid rgba(255,255,255,0.3);
-  border-radius: 9999px;
-  padding: 0.25rem 0.5rem;
+  gap: 0.5rem;
+  background-color: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 0.5rem;
+  padding: 0.5rem 0.75rem;
+  transition: all 0.3s ease;
 }
 
-.language-icon {
-  width: 1.5rem;
-  height: 1.5rem;
+.language-selector:hover {
+  background-color: rgba(255, 255, 255, 0.15);
+  border-color: rgba(255, 255, 255, 0.3);
 }
 
 .language-select {
   background: transparent;
   border: none;
   color: #fff;
-  font-size: 0.875rem;
+  font-size: 0.8rem;
+  font-weight: 500;
   cursor: pointer;
   appearance: none;
   outline: none;
-  min-width: 4rem; /* pour éviter que le texte ne dépasse */
+  min-width: 3rem;
+  padding: 0;
 }
 
-
-
 .language-select option {
-  background-color: #333; /* Fond pour les options */
-  color: #fff; /* Couleur du texte des options */
+  background-color: #374151;
+  color: #fff;
+  padding: 0.5rem;
 }
 /* Scroll to Top Button Animations */
 @keyframes fadeInUp {
