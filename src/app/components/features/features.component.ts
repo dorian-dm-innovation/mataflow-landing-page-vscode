@@ -56,7 +56,7 @@ export class FeaturesComponent implements AfterViewInit {
     this.isVideoModalOpen = true;
   }
 
-  closeModal(): void {
+  closeVideoModal(): void {
     this.isVideoModalOpen = false;
   }
   
