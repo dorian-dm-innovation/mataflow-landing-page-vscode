@@ -36,6 +36,8 @@
   border-radius: 20px;
   padding: 0.5rem 0.75rem;
   transition: all 0.3s ease;
+  min-width: 100px;
+  min-height: 30px;
 }
 
 .language-selector:hover {
