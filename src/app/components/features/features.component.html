@@ -62,34 +62,26 @@
 >
   Voir la présentation vidéo
 </button>
-          
-        </div>
-        
-      </div>
-    </div>
-  </div>
-  <!-- Modal Vidéo -->
+          <!-- Modal Vidéo -->
 <div 
   *ngIf="isVideoModalOpen" 
   class="modal"
   (click)="closeVideoModal()"
 >
-  <!-- Contenu Modal -->
   <div 
     class="modal-content"
     (click)="$event.stopPropagation()"
   >
-    <!-- Bouton fermeture -->
     <span 
       (click)="closeVideoModal()"
       class="close"
       aria-label="Fermer"
     >&times;</span>
 
-    <h2>Présentation vidéo</h2>
-    <p>Découvrez Mata en action</p>
+    <h2>Présentation de Mata</h2>
+    <p>Découvrez notre solution en vidéo</p>
 
-    <!-- Vidéo locale -->
+    <!-- Vidéo responsive -->
     <div class="video-container">
       <video 
         controls
@@ -102,6 +94,11 @@
     </div>
   </div>
 </div>
+        </div>
+        
+      </div>
+    </div>
+  </div>
 
 </section>
 
