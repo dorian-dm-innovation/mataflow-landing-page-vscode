@@ -47,19 +47,3 @@
   text-decoration: none;
   cursor: pointer;
 }
-
-
-.video-container {
-  position: relative;
-  width: 100%;
-  padding-bottom: 56.25%; /* ratio 16:9 */
-  height: 0;
-}
-
-.video-container video {
-  position: absolute;
-  inset: 0;
-  width: 100%;
-  height: 100%;
-  border-radius: 10px;
-}
