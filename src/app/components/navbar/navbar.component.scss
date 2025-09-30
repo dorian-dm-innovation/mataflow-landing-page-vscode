@@ -57,8 +57,9 @@ select {
   cursor: pointer;
   appearance: none;
   outline: none;
-  padding: 0;
+  min-width: 4rem; /* pour éviter que le texte ne dépasse */
 }
+
 
 
 .language-select option {
