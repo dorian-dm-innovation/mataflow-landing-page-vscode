@@ -1,119 +1,142 @@
-<footer role="contentinfo" class="w-full bg-gradient-to-b from-gray-400 via-gray-500 to-gray-600 text-white relative overflow-hidden" id="footer">
+<footer role="contentinfo" class="w-full bg-gradient-to-b from-gray-400 via-gray-500 to-gray-600 text-white relative overflow-hidden">
   <!-- Silver metallic overlay -->
   <div class="absolute inset-0 bg-gradient-to-br from-gray-200/10 via-transparent to-gray-300/15 pointer-events-none"></div>
   <div class="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(156,163,175,0.15),transparent_50%)] pointer-events-none"></div>
 
-  <div class="container px-4 sm:px-6 lg:px-8 mx-auto py-2 md:py-3 relative">
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 lg:gap-6">
-      <!-- Brand + Description -->
+  <div class="container px-4 sm:px-6 lg:px-8 mx-auto py-14 md:py-20 relative">
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 lg:gap-14">
+      <!-- Brand + Newsletter -->
       <div>
-        <div class="flex items-center gap-3 mb-2">
+        <div class="flex items-center gap-3 mb-4">
           <img src="assets/lovable-uploads/a03498d1-c8e9-4fd1-8060-e49932eee010.png" alt="Logo Mata Medical Data" class="h-12 w-auto filter brightness-110 contrast-110" loading="lazy" />
         </div>
-        <p class="text-gray-100 leading-relaxed mb-3">
+        <p class="text-gray-100 leading-relaxed mb-6">
           L'assistant préféré des radiologues. Accélérez vos diagnostics tout en gardant le contrôle.
         </p>
+        <div class="flex items-center gap-4 mt-6" aria-label="Réseaux sociaux">
+          <a href="#" aria-label="Twitter" target="_blank" rel="noopener noreferrer">
+            <img src="/assets/icons/twitter.svg" alt="Twitter" class="h-5 w-5" />
+          </a>
+          <a href="#" aria-label="GitHub" target="_blank" rel="noopener noreferrer">
+            <img src="/assets/icons/github.svg" alt="GitHub" class="h-5 w-5" />
+          </a>
+          <a href="#" aria-label="LinkedIn" target="_blank" rel="noopener noreferrer">
+            <img src="/assets/icons/linkedin.svg" alt="LinkedIn" class="h-5 w-5" />
+          </a>
+        </div>
+
       </div>
 
-      <!-- Product Links -->
-      <nav aria-label="Produit" class="grid gap-2">
-        <h3 class="text-sm uppercase tracking-wider text-gray-300 font-semibold mb-1">Produit</h3>
-        <a href="#made-by-humans" class="text-gray-200 hover:text-white transition-colors hover:underline">Votre assistant IA</a>
+      <!-- Product -->
+      <nav aria-label="Produit" class="grid gap-3">
+        <h3 class="text-sm uppercase tracking-wider text-gray-300 font-semibold">Produit</h3>
+        <a href="#made-by-humans" class="text-gray-200 hover:text-white transition-colors hover:underline">Concept</a>
         <a href="#expert-committee" class="text-gray-200 hover:text-white transition-colors hover:underline">Comité scientifique</a>
-        <a href="#features" class="text-gray-200 hover:text-white transition-colors hover:underline">Données de confiance</a>
-        <a href="#trust-database" class="text-gray-200 hover:text-white transition-colors hover:underline">L'avis des experts</a>
-        <a href="#testimonials" class="text-gray-200 hover:text-white transition-colors hover:underline">Demander ma démo</a>
+        <a href="#features" class="text-gray-200 hover:text-white transition-colors hover:underline">Capacités</a>
+        <a href="#trust-database" class="text-gray-200 hover:text-white transition-colors hover:underline">Base de données</a>
+        <a href="#testimonials" class="text-gray-200 hover:text-white transition-colors hover:underline">Témoignages</a>
+        <a href="#details" class="text-gray-200 hover:text-white transition-colors hover:underline">Démonstration</a>
       </nav>
 
-      <!-- Company Links -->
-      <nav aria-label="Société" class="grid gap-2">
-        <h3 class="text-sm uppercase tracking-wider text-gray-300 font-semibold mb-1">Société</h3>
-        <a (click)="openModal('conditionsUtilisation')" class="text-gray-200 hover:text-white transition-colors hover:underline cursor-pointer">CGU/CGV</a>
-        <a (click)="openModal('mentionsLegales')" class="text-gray-200 hover:text-white transition-colors hover:underline cursor-pointer">Mentions Légales</a>
+      <!-- Company -->
+      <nav aria-label="Société" class="grid gap-3">
+        <h3 class="text-sm uppercase tracking-wider text-gray-300 font-semibold">Société</h3>
+      
+        <!-- Ouvre le modal avec le contenu CGU -->
+        <a (click)="openModal('conditionsUtilisation')" class="text-gray-200 hover:text-white transition-colors hover:underline cursor-pointer">
+          CGU/CGV
+        </a>
+      
+        <!-- Modal -->
+        <div *ngIf="isModalOpen" class="modal">
+          <div class="modal-content">
+            <span class="close" (click)="closeModal()">&times;</span>        
+      
+            <div *ngIf="modalContent === 'conditionsUtilisation'">
+              <h1 class="text-2xl font-bold mb-4">Conditions générales d'utilisation</h1>
+
+              <h2 class="text-xl font-semibold mt-4 mb-2">1. Acceptation des conditions</h2>
+              <p>
+                En utilisant le chatbot radiologique, vous acceptez pleinement et sans réserve les présentes conditions générales d'utilisation. 
+                Si vous n'acceptez pas ces conditions, veuillez ne pas utiliser le chatbot.
+              </p>
+            
+              <h2 class="text-xl font-semibold mt-4 mb-2">2. Objectif du chatbot</h2>
+              <p>
+                Le chatbot radiologique est spécifiquement conçu pour assister les radiologues en fournissant des informations pertinentes à leur domaine d'expertise. 
+                Il est important de souligner que le chatbot ne doit pas être considéré comme une aide au diagnostic ou un conseil médical. 
+                Les utilisateurs doivent toujours consulter un professionnel de santé qualifié pour des avis médicaux personnalisés. 
+                Les décisions doivent être prises par les professionnels de santé en s'appuyant sur leur propre expertise et non uniquement sur les informations fournies par le chatbot.
+              </p>
+            
+              <h2 class="text-xl font-semibold mt-4 mb-2">3. Utilisation responsable</h2>
+              <p>
+                Vous vous engagez à utiliser le chatbot radiologique de manière responsable, éthique et conforme à toutes les lois et réglementations en vigueur. 
+                Vous ne devez pas utiliser le chatbot à des fins illégales, diffamatoires, offensantes, ou pour tout autre usage non autorisé. 
+                Certaines ressources documentaires de MATA sont en cours de traduction. Par conséquent, MATA ne peut garantir un service aussi exhaustif dans les autres langues que le français à ce jour.
+              </p>
+            
+              <h2 class="text-xl font-semibold mt-4 mb-2">4. Confidentialité des données</h2>
+              <p>
+                Le chatbot n'a pas vocation à traiter des données personnelles de patients. Il est impératif de ne pas intégrer de données personnelles susceptibles d'identifier par quelque moyen que ce soit un individu. 
+                Nous nous engageons à maintenir la confidentialité des informations que vous fournissez au chatbot. 
+                Les données seront traitées conformément à notre politique de confidentialité, disponible pour consultation. 
+                Des mesures de sécurité appropriées seront mises en place pour protéger vos données contre tout accès non autorisé ou toute divulgation.
+              </p>
+            
+              <h2 class="text-xl font-semibold mt-4 mb-2">5. Responsabilité</h2>
+              <p>
+                L'utilisateur reconnaît et accepte que l'utilisation du chatbot est à ses propres risques. 
+                Le chatbot ne fournit qu'une assistance générale et ne peut pas remplacer une évaluation médicale approfondie. 
+                En conséquence, l'utilisateur est seul responsable des décisions qu'il prend en se basant sur les informations fournies par le chatbot. 
+                Aucune garantie n'est donnée quant à l'exactitude, la fiabilité ou la pertinence des informations fournies.
+              </p>
+            
+              <h2 class="text-xl font-semibold mt-4 mb-2">6. Mises à jour et modifications</h2>
+              <p>
+                Nous nous réservons le droit de mettre à jour, modifier ou interrompre le chatbot radiologique à tout moment. 
+                Les utilisateurs seront informés de tout changement significatif via des notifications appropriées. 
+                En continuant à utiliser le chatbot après de telles modifications, l'utilisateur accepte les nouvelles conditions. 
+                Toutefois, nous ne sommes pas responsables des conséquences résultant de ces modifications.
+              </p>
+            
+              <h2 class="text-xl font-semibold mt-4 mb-2">7. Droits de propriété intellectuelle</h2>
+              <p>
+                Les utilisateurs reconnaissent que tous les droits de propriété intellectuelle relatifs au chatbot radiologique et à son contenu sont détenus exclusivement par nous. 
+                Aucune licence ni droit d'utilisation commerciale n'est accordé, sauf indication contraire dans les présentes CGU.
+              </p>
+            
+              <h2 class="text-xl font-semibold mt-4 mb-2">8. Dispositions diverses</h2>
+              <p>
+                Les présentes conditions générales d'utilisation sont régies par les lois en vigueur en France. 
+                En cas de litige, les tribunaux compétents seront ceux de Grasse, ressort de notre siège social. 
+                Des dispositions spécifiques peuvent être ajoutées pour préciser la juridiction applicable et les mécanismes de règlement des litiges.
+              </p>
+            </div>
+          </div>
+        </div>
       </nav>
 
-      <!-- Resources Links -->
-      <nav aria-label="Ressources" class="grid gap-2">
-        <h3 class="text-sm uppercase tracking-wider text-gray-300 font-semibold mb-1">Ressources</h3>
-        <a (click)="openContactModal()" class="text-gray-200 hover:text-white transition-colors hover:underline cursor-pointer">Nous Contacter</a>
-        <a href="#" class="text-gray-200 hover:text-white transition-colors hover:underline">Nos Partenaires</a>
+
+      <!-- Resources -->
+      <nav aria-label="Ressources" class="grid gap-3">
+        <h3 class="text-sm uppercase tracking-wider text-gray-300 font-semibold mb-0">Ressources</h3>
+        <a href="#trust-database" class="text-gray-200 hover:text-white transition-colors hover:underline">Sécurité & Confiance</a>
+        <a href="#partners" class="text-gray-200 hover:text-white transition-colors hover:underline">Partenaires</a>
       </nav>
     </div>
 
     <!-- Bottom bar -->
-    <div class="mt-2 pt-2 border-t border-gray-500/50 flex flex-col md:flex-row items-center justify-between gap-2">
-      <p class="text-gray-200 text-sm">© {{ currentYear }} Mata Medical Data. Tous droits réservés.</p>
+    <div class="mt-12 pt-8 border-t border-gray-500/50 flex flex-col md:flex-row items-center justify-between gap-4">
+      <p class="text-gray-200 text-sm">
+        © {{ currentYear }} Mata Medical Data. Tous droits réservés.
+      </p>
+      <div class="flex items-center gap-6 text-sm">
+        <a href="#" class="text-gray-200 hover:text-white transition-colors hover:underline">Confidentialité</a>
+        <a href="#" class="text-gray-200 hover:text-white transition-colors hover:underline">Conditions</a>
+        <a href="#" class="text-gray-200 hover:text-white transition-colors hover:underline">Cookies</a>
+      </div>
     </div>
+
   </div>
 </footer>
-
-<!-- Modale CGU et Mentions légales -->
-<div *ngIf="isModalOpen" class="modal fixed inset-0 z-50 flex items-center justify-center bg-black/80 backdrop-blur-sm">
-  <div class="modal-content relative w-full max-w-3xl mx-4 bg-gray-900 rounded-2xl overflow-hidden shadow-2xl p-6" (click)="$event.stopPropagation()">
-    <span class="close absolute top-4 right-4 text-white text-2xl cursor-pointer" (click)="closeModal()">&times;</span>
-
-    <!-- Conditions d'utilisation -->
-    <div *ngIf="modalContent === 'conditionsUtilisation'">
-      <h1 class="text-2xl font-bold mb-4">Conditions générales d'utilisation</h1>
-      <h2 class="text-xl font-semibold mt-4 mb-2">1. Acceptation des conditions</h2>
-      <p>En utilisant le chatbot radiologique, vous acceptez pleinement et sans réserve les présentes conditions générales d'utilisation. Si vous n'acceptez pas ces conditions, veuillez ne pas utiliser le chatbot.</p>
-      <h2 class="text-xl font-semibold mt-4 mb-2">2. Objectif du chatbot</h2>
-      <p>Le chatbot radiologique est spécifiquement conçu pour assister les radiologues en fournissant des informations pertinentes à leur domaine d'expertise. Il est important de souligner que le chatbot ne doit pas être considéré comme une aide au diagnostic ou un conseil médical. Les utilisateurs doivent toujours consulter un professionnel de santé qualifié pour des avis médicaux personnalisés. Les décisions doivent être prises par les professionnels de santé en s'appuyant sur leur propre expertise et non uniquement sur les informations fournies par le chatbot.</p>
-      <h2 class="text-xl font-semibold mt-4 mb-2">3. Utilisation responsable</h2>
-      <p>Vous vous engagez à utiliser le chatbot radiologique de manière responsable, éthique et conforme à toutes les lois et réglementations en vigueur. Vous ne devez pas utiliser le chatbot à des fins illégales, diffamatoires, offensantes, ou pour tout autre usage non autorisé. Certaines ressources documentaires de MATA sont en cours de traduction. Par conséquent, MATA ne peut garantir un service aussi exhaustif dans les autres langues que le français à ce jour.</p>
-      <h2 class="text-xl font-semibold mt-4 mb-2">4. Confidentialité des données</h2>
-      <p>Le chatbot n'a pas vocation à traiter des données personnelles de patients. Il est impératif de ne pas intégrer de données personnelles susceptibles d'identifier par quelque moyen que ce soit un individu. Nous nous engageons à maintenir la confidentialité des informations que vous fournissez au chatbot. Les données seront traitées conformément à notre politique de confidentialité, disponible pour consultation. Des mesures de sécurité appropriées seront mises en place pour protéger vos données contre tout accès non autorisé ou toute divulgation.</p>
-      <h2 class="text-xl font-semibold mt-4 mb-2">5. Responsabilité</h2>
-      <p>L'utilisateur reconnaît et accepte que l'utilisation du chatbot est à ses propres risques. Le chatbot ne fournit qu'une assistance générale et ne peut pas remplacer une évaluation médicale approfondie. En conséquence, l'utilisateur est seul responsable des décisions qu'il prend en se basant sur les informations fournies par le chatbot. Aucune garantie n'est donnée quant à l'exactitude, la fiabilité ou la pertinence des informations fournies.</p>
-      <h2 class="text-xl font-semibold mt-4 mb-2">6. Mises à jour et modifications</h2>
-      <p>Nous nous réservons le droit de mettre à jour, modifier ou interrompre le chatbot radiologique à tout moment. Les utilisateurs seront informés de tout changement significatif via des notifications appropriées. En continuant à utiliser le chatbot après de telles modifications, l'utilisateur accepte les nouvelles conditions. Toutefois, nous ne sommes pas responsables des conséquences résultant de ces modifications.</p>
-      <h2 class="text-xl font-semibold mt-4 mb-2">7. Droits de propriété intellectuelle</h2>
-      <p>Les utilisateurs reconnaissent que tous les droits de propriété intellectuelle relatifs au chatbot radiologique et à son contenu sont détenus exclusivement par nous. Aucune licence ni droit d'utilisation commerciale n'est accordé, sauf indication contraire dans les présentes CGU.</p>
-      <h2 class="text-xl font-semibold mt-4 mb-2">8. Dispositions diverses</h2>
-      <p>Les présentes conditions générales d'utilisation sont régies par les lois en vigueur en France. En cas de litige, les tribunaux compétents seront ceux de Grasse, ressort de notre siège social. Des dispositions spécifiques peuvent être ajoutées pour préciser la juridiction applicable et les mécanismes de règlement des litiges.</p>
-    </div>
-
-    <!-- Mentions légales -->
-    <div *ngIf="modalContent === 'mentionsLegales'">
-      <h1 class="text-2xl font-bold mb-4">Mentions légales</h1>
-      <h2 class="text-xl font-semibold mt-4 mb-2">1. Informations sur l'éditeur du site</h2>
-      <p>
-        Nom ou dénomination sociale : MATA MEDICAL DATA<br>
-        Forme juridique : Société par actions simplifiée (SAS)<br>
-        Capital social : 3 000,00 Euros<br>
-        Adresse du siège social : 1047 Route Des Dolines, C/o Business Pôle, 1 Allée Pierre Ziller, 06560 Valbonne<br>
-        Adresse e-mail : <a href="mailto:contact@mata-network.com" class="text-cyan-400 hover:text-cyan-300 underline">contact@mata-network.com</a><br>
-        Numéro d'immatriculation au RCS : 983 386 178 R.C.S. Grasse<br>
-        Numéro de TVA intracommunautaire : Non applicable<br>
-        Directeur ou responsable de la publication : MATA SASU
-      </p>
-      <h2 class="text-xl font-semibold mt-4 mb-2">2. Informations sur l'hébergement</h2>
-      <p>Nom de l'hébergeur : Hébergeur HDS Français</p>
-      <h2 class="text-xl font-semibold mt-4 mb-2">3. Propriété intellectuelle</h2>
-      <p>Le contenu du site, y compris textes, images, vidéos, logos, graphiques, icônes et autres éléments de design, est la propriété exclusive de MATA MEDICAL DATA ou de ses partenaires. Toute reproduction, modification, publication ou transmission sans autorisation est strictement interdite.</p>
-      <h2 class="text-xl font-semibold mt-4 mb-2">4. Données personnelles</h2>
-      <p>Le site collecte et stocke certaines données personnelles conformément au RGPD. Ces données peuvent être supprimées à tout moment par l'utilisateur via une fonction dédiée. Elles ne sont utilisées qu’à la gestion des sessions utilisateurs.</p>
-      <h2 class="text-xl font-semibold mt-4 mb-2">5. Cookies</h2>
-      <p>Ce site utilise uniquement des cookies techniques nécessaires à la gestion des sessions utilisateurs.</p>
-      <h2 class="text-xl font-semibold mt-4 mb-2">6. Responsabilité</h2>
-      <p>MATA MEDICAL DATA met tout en œuvre pour fournir des informations précises et à jour. Toutefois, l'utilisateur reconnaît utiliser ces informations sous sa responsabilité.</p>
-      <h2 class="text-xl font-semibold mt-4 mb-2">7. Droit applicable et attribution de juridiction</h2>
-      <p>Les présentes mentions légales sont régies par le droit français. En cas de litige, la compétence est attribuée exclusivement aux tribunaux compétents de Grasse.</p>
-    </div>
-  </div>
-</div>
-
-<!-- Modale "Nous contacter" -->
-<div *ngIf="isContactModalOpen" class="modal fixed inset-0 z-50 flex items-center justify-center bg-black/80 backdrop-blur-sm">
-  <div class="modal-content relative w-full max-w-2xl mx-4 bg-gray-900 rounded-2xl overflow-hidden shadow-2xl p-6" (click)="$event.stopPropagation()">
-    <span class="close absolute top-4 right-4 text-white text-2xl cursor-pointer" (click)="closeContactModal()">&times;</span>
-
-    <h2 class="text-2xl font-bold mb-4">Nous contacter</h2>
-    <h3 class="text-xl font-semibold mt-4 mb-2">1. Informations de contact</h3>
-    <a href="mailto:contact@mata-network.com" class="text-cyan-400 hover:text-cyan-300 underline">contact@mata-network.com</a>
-    <h3 class="text-xl font-semibold mt-4 mb-2">2. Adresse</h3>
-    <p>Adresse du siège social : 1047 Route Des Dolines, C/o Business Pôle, 1 Allée Pierre Ziller, 06560 Valbonne</p>
-    <h3 class="text-xl font-semibold mt-4 mb-2">3. Formulaire de contact</h3>
-    <p>Vous pouvez nous contacter directement via notre formulaire de contact disponible sur le site.</p>
-  </div>
-</div>
