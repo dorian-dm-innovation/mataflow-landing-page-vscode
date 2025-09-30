@@ -30,10 +30,12 @@ export class FooterComponent {
   openModal(content: string): void {
     this.modalContent = content;
     this.isModalOpen = true;
+    document.body.style.overflow = 'hidden';
   }
 
   closeModal(): void {
     this.isModalOpen = false;
+    document.body.style.overflow = '';
   }
 
   handleSubscribe(): void {
