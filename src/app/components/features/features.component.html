@@ -76,3 +76,60 @@
   </div>
   
 </section>
+
+<!-- Modal Vidéo -->
+<div 
+  *ngIf="isVideoModalOpen" 
+  class="modal fixed inset-0 z-50 flex items-center justify-center bg-black/80 backdrop-blur-sm"
+  (click)="closeVideoModal()"
+>
+  <div 
+    class="modal-content relative w-full max-w-4xl mx-4 bg-gray-900 rounded-2xl overflow-hidden shadow-2xl"
+    (click)="$event.stopPropagation()"
+  >
+    <span 
+      (click)="closeVideoModal()"
+      class="close absolute top-4 right-4 text-white text-2xl cursor-pointer z-10"
+      aria-label="Fermer"
+    >&times;</span>
+
+    <div class="p-6">
+      <h2 class="text-2xl font-bold mb-4 text-white text-center">Présentation de Mata</h2>
+      <p class="text-gray-300 text-center mb-6">Découvrez comment Mata révolutionne la pratique radiologique</p>
+      
+      <div class="video-container">
+        <video 
+          controls 
+          class="w-full h-auto rounded-lg"
+          poster="assets/radiologist-hero-main.jpg"
+        >
+          <source src="assets/mata-presentation.mp4" type="video/mp4">
+          <source src="assets/mata-presentation.webm" type="video/webm">
+          Votre navigateur ne supporte pas la lecture de vidéos.
+        </video>
+      </div>
+      
+      <div class="mt-6 text-center">
+        <p class="text-gray-400 text-sm mb-4">
+          Vidéo de présentation • 5 minutes • Découvrez toutes les fonctionnalités
+        </p>
+        <div class="flex flex-col sm:flex-row gap-4 justify-center">
+          <a 
+            href="https://mata-md.com/login" 
+            class="bg-gradient-to-r from-cyan-400 to-blue-500 hover:from-cyan-300 hover:to-blue-400 text-white font-semibold py-3 px-6 rounded-lg transition-all duration-300 transform hover:scale-105"
+            target="_blank" 
+            rel="noopener noreferrer"
+          >
+            Essayer maintenant
+          </a>
+          <button 
+            (click)="closeVideoModal()"
+            class="bg-gray-700 hover:bg-gray-600 text-white font-semibold py-3 px-6 rounded-lg transition-all duration-300"
+          >
+            Fermer
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
