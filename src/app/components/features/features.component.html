@@ -3,7 +3,15 @@
     w-full bg-gradient-to-b from-pulse-950 to-pulse-900 text-white py-12 sm:py-20
   "
   id="features"
-  [ngStyle]="{ 'background-image': 'linear-gradient(rgba(12,65,139,0.95), rgba(0,25,61,0.95)), url(assets/network-education.jpg)', 'background-size': 'cover', 'background-position': 'center', 'background-attachment': 'fixed' }"
+  [ngStyle]="isBrowser ? {
+    'background-image': 'linear-gradient(rgba(12,65,139,0.95), rgba(0,25,61,0.95)), url(' + networkBanner2 + ')',
+    'background-size': 'cover',
+    'background-position': 'center',
+    'background-attachment': 'fixed'
+  } : {
+    'background-image': 'linear-gradient(rgba(12,65,139,0.95), rgba(0,25,61,0.95)), url(' + networkBanner2 + ')',
+    'background-size': 'cover',
+    'background-position': 'center'}"
 >
   <div class="container px-4 sm:px-6 lg:px-8 mx-auto">
     <div class="text-center mb-12 sm:mb-16">
