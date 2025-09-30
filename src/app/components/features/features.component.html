@@ -56,7 +56,33 @@
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"></path>
             </svg>
           </a>
-          <a href="/demo" class="button-secondary w-full sm:w-auto">Présentation vidéo</a>
+          <a 
+            class="button-secondary w-full sm:w-auto cursor-pointer"
+            (click)="openModal('video')"
+          >
+            Présentation vidéo
+          </a>
+          
+          <!-- Modal vidéo -->
+          <div *ngIf="isModalOpen && modalContent === 'video'" class="modal">
+            <div class="modal-content">
+              <span class="close" (click)="closeModal()">&times;</span>
+              <h2 class="mb-4">Présentation vidéo</h2>
+              
+              <!-- Exemple YouTube -->
+              <div class="relative pb-[56.25%] h-0 overflow-hidden rounded-lg">
+                <iframe 
+                  class="absolute top-0 left-0 w-full h-full rounded-lg"
+                  src="https://www.youtube.com/embed/xxxxxxx" 
+                  title="Présentation vidéo"
+                  frameborder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowfullscreen>
+                </iframe>
+              </div>
+            </div>
+          </div>
+
         </div>
       </div>
     </div>
