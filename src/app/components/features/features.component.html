@@ -203,28 +203,29 @@
         </svg>
       </button>
 
-      <!-- Video Modal -->
+     
+
+    </div>
+  </div>
+   <!-- Video Modal -->
       <div *ngIf="isVideoModalOpen" class="modal" (click)="closeVideoModal()">
-  <div class="modal-content" (click)="$event.stopPropagation()">
-  
-    <!-- Close Button -->
-    <button (click)="closeVideoModal()" class="close" aria-label="Fermer">&times;</button>
-  
-    <!-- Video Container -->
-    <div style="position: relative; padding-bottom: 56.25%; height: 0;">
-      <video 
-        style="position: absolute; top:0; left:0; width:100%; height:100%;" 
-        autoplay
-      >
-        <source src="assets/videos/demo.mp4" type="video/mp4">
-        Votre navigateur ne supporte pas la lecture vidéo.
-      </video>
-    </div>
+        <div class="modal-content" (click)="$event.stopPropagation()">
+        
+          <!-- Close Button -->
+          <button (click)="closeVideoModal()" class="close" aria-label="Fermer">&times;</button>
+        
+          <!-- Video Container -->
+          <div style="position: relative; padding-bottom: 56.25%; height: 0;">
+            <video 
+              style="position: absolute; top:0; left:0; width:100%; height:100%;" 
+              autoplay
+            >
+              <source src="assets/videos/demo.mp4" type="video/mp4">
+              Votre navigateur ne supporte pas la lecture vidéo.
+            </video>
+          </div>
+      
+        </div>
+      </div>
 
-  </div>
-</div>
-
-
-    </div>
-  </div>
 </section>
