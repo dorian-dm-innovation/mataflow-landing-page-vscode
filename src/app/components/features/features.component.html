@@ -76,19 +76,20 @@
             (click)="closeVideoModal()"
           >
             <div class="modal-content" (click)="$event.stopPropagation()">
-            <span class="close" (click)="closeVideoModal()" aria-label="Fermer">&times;</span>
-            <h2>Présentation de Mata</h2>
-            <p>Découvrez comment Mata révolutionne la pratique radiologique</p>
-            <div style="position: relative; padding-bottom: 56.25%; height: 0;">
-              <video 
-                style="position: absolute; top:0; left:0; width:100%; height:100%;" 
-                controls autoplay
-              >
-                <source src="assets/videos/demo.mp4" type="video/mp4">
-                Votre navigateur ne supporte pas la lecture vidéo.
-              </video>
+              <span class="close" (click)="closeVideoModal()" aria-label="Fermer">&times;</span>
+              <h2>Présentation de Mata</h2>
+              <p>Découvrez comment Mata révolutionne la pratique radiologique</p>
+              <div style="position: relative; padding-bottom: 56.25%; height: 0;">
+                <video 
+                  style="position: absolute; top:0; left:0; width:100%; height:100%;" 
+                  controls autoplay
+                >
+                  <source src="assets/videos/demo.mp4" type="video/mp4">
+                  Votre navigateur ne supporte pas la lecture vidéo.
+                </video>
+              </div>
             </div>
-          </div>
+
     </div>
   </div>    
 </section>
