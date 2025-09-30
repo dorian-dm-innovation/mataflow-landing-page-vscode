@@ -76,7 +76,13 @@
   </div>
 
 
-   <div class="modal-content" (click)="$event.stopPropagation()">
+   <!-- Modal -->
+  <div 
+    *ngIf="isVideoModalOpen" 
+    class="modal"
+    (click)="closeVideoModal()"
+  >
+    <div class="modal-content" (click)="$event.stopPropagation()">
   <span class="close" (click)="closeVideoModal()" aria-label="Fermer">&times;</span>
   <h2>Présentation de Mata</h2>
   <p>Découvrez comment Mata révolutionne la pratique radiologique</p>
@@ -91,5 +97,6 @@
   </div>
 </div>
 
+  </div>
   
 </section>
