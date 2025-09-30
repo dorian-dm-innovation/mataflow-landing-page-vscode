@@ -9,23 +9,74 @@
   }"
 >
   <div class="container px-4 sm:px-6 lg:px-8 mx-auto">
-    <!-- Contenu de la section ici -->
+    <div class="text-center mb-12 sm:mb-16">
+      <h2 class="text-3xl sm:text-4xl md:text-5xl font-display font-bold text-white mb-4">
+        Un seul agent conversationnel pour toute la
+        <span class="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-500 drop-shadow-[0_0_20px_rgba(6,182,212,0.7)] animate-pulse">
+          radiologie
+        </span>
+      </h2>
+      <p class="text-lg text-gray-200 max-w-4xl mx-auto leading-relaxed">
+        Posez vos questions et obtenez instantanément : réponses expertes, cas cliniques, cours professionnels, modèles de CR, anatomie régionale et liens web. Tout en une seule interface.
+      </p>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
+      <div *ngFor="let f of features; let i = index"
+           class="group relative overflow-hidden rounded-2xl shadow-xl transform-gpu transition-all duration-500 hover:scale-105 hover:shadow-[0_0_30px_rgba(49,185,255,0.4)]"
+           [style.animation-delay]="i * 0.1 + 's'">
+        <div class="absolute inset-0 z-0 bg-pulse-950/95"></div>
+        <div class="absolute inset-0 z-[1] bg-gradient-to-t from-pulse-950/90 via-pulse-900/60 to-pulse-950/80 backdrop-blur-sm"></div>
+        <div class="relative z-10 p-6 sm:p-8 h-full flex flex-col min-h-[320px]">
+          <div class="rounded-full bg-pulse-500/20 backdrop-blur-sm w-12 h-12 flex items-center justify-center text-pulse-400 mb-6 shadow-[0_0_15px_rgba(49,185,255,0.6)] flex-shrink-0"
+               [innerHTML]="f.icon">
+          </div>
+          <div class="mb-4 flex-shrink-0" style="min-height: 60px">
+            <h3 class="text-xl sm:text-2xl font-display font-bold text-pulse-300 group-hover:text-pulse-200 transition-all duration-300 leading-tight">
+              {{ f.title }}
+            </h3>
+          </div>
+          <div class="flex-grow">
+            <p class="text-gray-200 text-sm sm:text-base leading-relaxed">
+              {{ f.description }}
+            </p>
+          </div>
+        </div>
+        <div class="absolute inset-0 z-[2] bg-pulse-400/5 group-hover:opacity-100 transition-opacity duration-300 shadow-[inset_0_0_20px_rgba(49,185,255,0.3)]"></div>
+      </div>
+    </div>
+
     <div class="text-center mt-16">
       <div class="max-w-3xl mx-auto">
+        <h3 class="text-2xl font-display font-bold text-white mb-4">
+          Une solution complète pour toute votre pratique
+        </h3>
+        <p class="text-gray-200 mb-8 text-lg">
+          Découvrez comment Mata peut transformer votre workflow quotidien avec une démonstration personnalisée.
+        </p>
         <div class="flex flex-col sm:flex-row gap-4 justify-center max-w-md mx-auto">
           <a href="https://mata-md.com/login" 
              class="button-primary group w-full sm:w-auto"
              target="_blank" rel="noopener noreferrer">
             Essayer maintenant
+            <svg class="ml-2 w-4 h-4 transition-transform group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"></path>
+            </svg>
           </a>
           <a (click)="openVideoModal()"
              class="button-secondary w-full sm:w-auto cursor-pointer">
             Présentation vidéo
           </a>
+
         </div>
+
+
+        
       </div>
     </div>
   </div>
+
+
 </section>
 
 <!-- MODAL VIDÉO : à l'extérieur de la section ! -->
