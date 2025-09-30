@@ -6,6 +6,7 @@ import { TrustDatabaseComponent } from '../../components/trust-database/trust-da
 import { TestimonialsComponent } from '../../components/testimonials/testimonials.component';
 import { DetailsSectionComponent } from '../../components/details-section/details-section.component';
 import { NewsletterComponent } from '../../components/newsletter/newsletter.component';
+import { LinkedinSectionComponent } from '../../components/linkedin-section/linkedin-section.component';
 import { CommonModule } from '@angular/common';
 
 @Component({
@@ -19,7 +20,8 @@ import { CommonModule } from '@angular/common';
     TrustDatabaseComponent,
     TestimonialsComponent,
     DetailsSectionComponent,
-    NewsletterComponent
+    NewsletterComponent,
+    LinkedinSectionComponent
   ],
   templateUrl: './home.component.html',
   // styleUrls: ['./home.component.scss']
