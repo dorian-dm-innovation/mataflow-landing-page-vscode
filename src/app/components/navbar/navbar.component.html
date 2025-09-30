@@ -14,8 +14,11 @@
         class="h-10 sm:h-12 md:h-14" 
       />
     </a>
-    <div>
-      <!-- Desktop Navigation -->
+      
+       
+    <!-- Language Selector -->
+      <div class="container-global">
+        <!-- Desktop Navigation -->
       <nav class="hidden md:flex space-x-8">
         <a (click)="navigateTo('/')" class="nav-link-header">Mata MD</a>
         <!-- <a href="#made-by-humans" class="nav-link-header">Concept</a> -->
@@ -26,10 +29,6 @@
         <a href="#details" class="nav-link-header">Demander ma démo</a>
         <a href="#footer" class="nav-link-header">À propos</a>
       </nav>
-       
-    </div>
-    <!-- Language Selector -->
-      <div class="container-global">
         <div class="language-selector">
           <img src="assets/login-image/world-language.svg" alt="Language Icon" class="language-icon">
           <select (change)="ChangeLang($event)" class="language-select">
