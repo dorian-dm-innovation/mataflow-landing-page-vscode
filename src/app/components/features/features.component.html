@@ -67,25 +67,7 @@
              class="button-secondary w-full sm:w-auto cursor-pointer">
             Présentation vidéo
           </a>
-          <!-- Modal -->
-  <div 
-    *ngIf="isVideoModalOpen" 
-    class="modal"
-    (click)="closeVideoModal()"
-  >
-    <!-- Modal Content -->
-    <div 
-      class="modal-content"
-      (click)="$event.stopPropagation()"
-    >
-      <!-- Close Button -->
-      <span 
-        (click)="closeVideoModal()"
-        class="close"
-        aria-label="Fermer"
-      >&times;</span>
-    </div>
-  </div>
+          
         </div>
       </div>
     </div>
