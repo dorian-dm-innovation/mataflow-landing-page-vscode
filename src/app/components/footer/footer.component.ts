@@ -16,14 +16,24 @@ import { MatIconModule } from '@angular/material/icon'; // <-- Important !
 })
 export class FooterComponent {
   subscribeForm: FormGroup;
+  contactForm: FormGroup;
   modalContent: string = '';
   isModalOpen = false;
+  isContactModalOpen = false;
+  isSubmitting = false;
 
   currentYear: number = new Date().getFullYear();
 
   constructor(private fb: FormBuilder) {
     this.subscribeForm = this.fb.group({
       email: ['', [Validators.required, Validators.email]]
+    });
+
+    this.contactForm = this.fb.group({
+      fullName: ['', Validators.required],
+      email: ['', [Validators.required, Validators.email]],
+      company: [''],
+      message: ['']
     });
   }
 
@@ -36,6 +46,33 @@ export class FooterComponent {
   closeModal(): void {
     this.isModalOpen = false;
     document.body.style.overflow = '';
+  }
+
+  openContactModal(): void {
+    this.isContactModalOpen = true;
+    document.body.style.overflow = 'hidden';
+  }
+
+  closeContactModal(): void {
+    this.isContactModalOpen = false;
+    document.body.style.overflow = '';
+  }
+
+  onContactSubmit(): void {
+    if (this.contactForm.invalid) {
+      alert('Veuillez remplir tous les champs obligatoires');
+      return;
+    }
+
+    this.isSubmitting = true;
+
+    // Simulate API call
+    setTimeout(() => {
+      alert('Message envoyé avec succès ! Nous vous contactons sous 24h.');
+      this.contactForm.reset();
+      this.isSubmitting = false;
+      this.closeContactModal();
+    }, 2000);
   }
 
   handleSubscribe(): void {
