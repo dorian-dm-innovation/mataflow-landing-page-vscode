@@ -23,11 +23,15 @@ export class PartnersSectionComponent {
   ];
 
   constructor(private fb: FormBuilder) {
+    this.subscribeForm = this.fb.group({
+      email: ['', [Validators.required, Validators.email]]
+    });
+
     this.contactForm = this.fb.group({
-      name: ['', Validators.required],
+      fullName: ['', Validators.required],
       email: ['', [Validators.required, Validators.email]],
       company: [''],
-      message: ['', Validators.required]
+      message: ['']
     });
   }
 
