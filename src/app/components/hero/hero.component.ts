@@ -65,4 +65,14 @@ export class HeroComponent implements AfterViewInit {
     this.imageRef.nativeElement.style.transform =
       `perspective(1000px) rotateY(0deg) rotateX(0deg) scale3d(1, 1, 1)`;
   }
+
+  openVideoModal(): void {
+    this.isVideoModalOpen = true;
+    document.body.style.overflow = 'hidden';
+  }
+
+  closeVideoModal(): void {
+    this.isVideoModalOpen = false;
+    document.body.style.overflow = '';
+  }
 }
