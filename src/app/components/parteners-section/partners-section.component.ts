@@ -18,4 +18,31 @@ export class PartnersSectionComponent {
     { name: "Partenaire 4", logo: "/partners/partner-4-logo.png", alt: "Logo Partenaire 4" },
     { name: "Partenaire 5", logo: "/partners/partner-5-logo.png", alt: "Logo Partenaire 5" }
   ];
+
+  openContactModal(): void {
+    this.isContactModalOpen = true;
+    document.body.style.overflow = 'hidden';
+  }
+
+  closeContactModal(): void {
+    this.isContactModalOpen = false;
+    document.body.style.overflow = '';
+  }
+
+  onContactSubmit(): void {
+    if (this.contactForm.invalid) {
+      alert('Veuillez remplir tous les champs obligatoires');
+      return;
+    }
+
+    this.isSubmitting = true;
+
+    // Simulate API call
+    setTimeout(() => {
+      alert('Message envoyé avec succès ! Nous vous contactons sous 24h.');
+      this.contactForm.reset();
+      this.isSubmitting = false;
+      this.closeContactModal();
+    }, 2000);
+  }
 }
