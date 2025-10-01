@@ -7,6 +7,7 @@ import { TestimonialsComponent } from '../../components/testimonials/testimonial
 import { DetailsSectionComponent } from '../../components/details-section/details-section.component';
 import { NewsletterComponent } from '../../components/newsletter/newsletter.component';
 import { LinkedinSectionComponent } from '../../components/linkedin-section/linkedin-section.component';
+import { PartnersSectionComponent } from '../../components/parteners-section/partners-section.component';
 import { CommonModule } from '@angular/common';
 
 @Component({
@@ -21,7 +22,8 @@ import { CommonModule } from '@angular/common';
     TestimonialsComponent,
     DetailsSectionComponent,
     NewsletterComponent,
-    LinkedinSectionComponent
+    LinkedinSectionComponent,
+    PartnersSectionComponent
   ],
   templateUrl: './home.component.html',
   // styleUrls: ['./home.component.scss']
