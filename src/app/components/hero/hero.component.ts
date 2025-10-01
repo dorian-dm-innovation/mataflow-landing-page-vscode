@@ -13,6 +13,8 @@ export class HeroComponent implements AfterViewInit {
   @ViewChild('imageRef', { static: true }) imageRef!: ElementRef<HTMLImageElement>;
 
   isMobile = false;
+  isVideoModalOpen = false;
+
 
   constructor(@Inject(PLATFORM_ID) private platformId: Object) {}
 
