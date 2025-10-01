@@ -10,6 +10,7 @@ import { Partner } from '../../models/partner.model';
 })
 export class PartnersSectionComponent {
   isContactModalOpen = false;
+  isSubmitting= false;
   partners: Partner[] = [
     { name: "Partenaire 1", logo: "/partners/partner-1-logo.png", alt: "Logo Partenaire 1" },
     { name: "Partenaire 2", logo: "/partners/partner-2-logo.png", alt: "Logo Partenaire 2" },
