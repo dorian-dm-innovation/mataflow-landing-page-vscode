@@ -10,9 +10,12 @@ import { Partner } from '../../models/partner.model';
   imports: [CommonModule, ReactiveFormsModule]
 })
 export class PartnersSectionComponent {
-  isContactModalOpen = false;
-  isSubmitting= false;
+  subscribeForm: FormGroup;
   contactForm: FormGroup;
+  modalContent: string = '';
+  isModalOpen = false;
+  isContactModalOpen = false;
+  isSubmitting = false;
 
   partners: Partner[] = [
     { name: "Partenaire 1", logo: "/partners/partner-1-logo.png", alt: "Logo Partenaire 1" },
