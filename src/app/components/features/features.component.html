@@ -79,7 +79,7 @@
 
 <!-- Modal Vidéo (placé en dehors de la section pour éviter les conflits de z-index) -->
 <div *ngIf="isVideoModalOpen" class="modal fixed inset-0 z-[9999] flex items-center justify-center bg-black/80 backdrop-blur-sm" (click)="closeVideoModal()">
-  <div class="modal-content w-11/12 sm:w-4/5 md:w-2/3 max-w-4xl" (click)="$event.stopPropagation()">
+  <div class="modal-content relative w-11/12 sm:w-4/5 md:w-2/3 max-w-4xl" (click)="$event.stopPropagation()">
     <!-- Close Button -->
     <span class="close absolute top-4 right-4 text-white text-2xl cursor-pointer" (click)="closeVideoModal()">&times;</span>
 
